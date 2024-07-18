@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <main className="relative bg-black flex flex-col justify-center 
       items-center overflow-hidden">
-        <div className="max-w-7xl w-full">
+        <div className="w-full">
           <Hero />
         </div>
       </main>
