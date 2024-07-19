@@ -6,6 +6,13 @@ import  MagicButton from './ui/MagicButton'
 import {  FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
+
+    const handleScroll = () => {
+        console.log('scrolling')
+        document.getElementById('tech-stack')?.scrollIntoView({ behavior: 'smooth' });
+    };
+
+
     return (
         <div>
             <div className='-z-10'>
@@ -65,6 +72,7 @@ const Hero = () => {
                         content='Show Projects'
                         icon={<FaArrowDown />}
                         position='right'
+                        handleClick={handleScroll}
                     />
                 </div>
             </div>
