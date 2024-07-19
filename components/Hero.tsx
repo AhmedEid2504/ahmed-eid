@@ -12,16 +12,16 @@ const Hero = () => {
         <div>
             <div>
                 <Spotlight 
-                    className='max-sm:top-[25vh] max-md:top-[20vh] md:top-[10vh] -right-10 h-screen w-[100vw]'
+                    className='max-sm:top-[21vh] sm:top-[12vh] md:top-[5vh] -right-10 h-screen w-[100vw]'
                     fill='#00fff9'
                 />
 
                 <Spotlight 
-                    className='max-sm:top-[24vh] max-md:top-[20vh] md:top-[10vh] -right-20 h-screen w-[100vw]'
+                    className='max-sm:top-[19vh] sm:top-[10vh] md:top-[3vh] -right-10 h-screen w-[100vw]'
                     fill='#00a2c5'
                 />
                 <Spotlight 
-                    className='max-sm:top-[23vh] max-md:top-[20vh] md:top-[10vh] -right-10 h-screen w-[100vw]'
+                    className='max-sm:top-[17vh] sm:top-[8vh] md:top-[1vh] -right-10 h-screen w-[100vw]'
                     fill='purple'
                 />
             </div>
@@ -35,15 +35,31 @@ const Hero = () => {
                         textColor='text-white'
                         delay={0.2}
                         textFamily='font-sans'
-                        className='text-3xl md:text-4xl lg:text-5xl text-center' 
+                        className='text-2xl md:text-3xl lg:text-4xl text-start' 
                     />
                     <TextGenerateEffect 
-                        words='< React Front-End Developer />'
+                        words='< reactFrontEndDeveloper'
                         textColor='text-clr_1'
-                        delay={0.8}
+                        delay={0.5}
                         duration={5}
                         textFamily='font-serif'
-                        className='text-3xl md:text-4xl lg:text-5xl text-center ' 
+                        className='text-lg md:text-2xl lg:text-3xl text-start ' 
+                    />
+                    <TextGenerateEffect 
+                        words="talented = ' true '"
+                        textColor='text-clr_1'
+                        delay={0.5}
+                        duration={8}
+                        textFamily='font-serif'
+                        className='text-lg md:text-2xl lg:text-3xl text-start pl-10 ' 
+                    />
+                    <TextGenerateEffect 
+                        words='/>'
+                        textColor='text-clr_1'
+                        delay={0.5}
+                        duration={5}
+                        textFamily='font-serif'
+                        className='text-lg md:text-2xl lg:text-3xl text-start ' 
                     />
                 </div>
                 <div className='mt-8'>
