@@ -37,7 +37,7 @@ const Hero = () => {
                     />
                     <TextGenerateEffect 
                         words='<ReactFrontEndDeveloper'
-                        textColor='text-clr_2'
+                        textColor='text-clr_1'
                         delay={0.5}
                         duration={5}
                         textFamily='font-serif'
@@ -45,7 +45,7 @@ const Hero = () => {
                     />
                     <TextGenerateEffect 
                         words="talented = ' true '"
-                        textColor='text-clr_2'
+                        textColor='text-clr_1'
                         delay={0.5}
                         duration={8}
                         textFamily='font-serif'
@@ -53,7 +53,7 @@ const Hero = () => {
                     />
                     <TextGenerateEffect 
                         words='/>'
-                        textColor='text-clr_2'
+                        textColor='text-clr_1'
                         delay={0.5}
                         duration={5}
                         textFamily='font-serif'
