@@ -7,10 +7,10 @@ import {  FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
 
-    const handleScroll = () => {
-        console.log('scrolling')
-        document.getElementById('tech-stack')?.scrollIntoView({ behavior: 'smooth' });
-    };
+    // const handleScroll = () => {
+    //     console.log('scrolling')
+    //     document.getElementById('tech-stack')?.scrollIntoView({ behavior: 'smooth' });
+    // };
 
 
     return (
@@ -72,7 +72,6 @@ const Hero = () => {
                         content='Show Projects'
                         icon={<FaArrowDown />}
                         position='right'
-                        handleClick={handleScroll}
                     />
                 </div>
             </div>
