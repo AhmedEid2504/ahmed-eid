@@ -27,7 +27,7 @@ const config = {
     },
     extend: {
       colors: {
-        clr_1: "#00d9ff",
+        clr_1: "#00CCFF",
         clr_2: "#00a2c5",
         clr_3: "#01629c",
         clr_4: "#00296f",
