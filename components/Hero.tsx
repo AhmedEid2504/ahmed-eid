@@ -4,39 +4,25 @@ import React, { use, useState } from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import  MagicButton from './ui/MagicButton'
-import { FaArrowAltCircleDown, FaArrowDown, FaLocationArrow } from 'react-icons/fa';
+import {  FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        setMousePosition({ x: e.clientX, y: e.clientY });
-    };
 
     return (
-        <div
-            onMouseMove={handleMouseMove}
-        >
-            {/*div that moves with mouse position centered*/}
-            <div
-                className="absolute -z-30 w-[200px] h-[200px] bg-clr_1 bg-opacity-[3%] rounded-full"
-                style={{ top: mousePosition.y - 100, left: mousePosition.x - 100 }}
-            >
-
-            </div>
+        <div>
             <div>
                 <Spotlight 
-                    className='-top-40 -left-10 md:-left-32 md:-top-20 h-screen'
-                    fill='white'
-                />
-                <Spotlight 
-                    className='top-0 left-[50vw] h-[90vh] w-[50vw]'
-                    fill='purple'
+                    className='max-sm:top-[25vh] max-md:top-[20vh] md:top-[10vh] -right-10 h-screen w-[100vw]'
+                    fill='#00fff9'
                 />
 
                 <Spotlight 
-                    className='top-28 -right-10 h-[80vh] w-[50vw]'
-                    fill='blue'
+                    className='max-sm:top-[24vh] max-md:top-[20vh] md:top-[10vh] -right-20 h-screen w-[100vw]'
+                    fill='#00a2c5'
+                />
+                <Spotlight 
+                    className='max-sm:top-[23vh] max-md:top-[20vh] md:top-[10vh] -right-10 h-screen w-[100vw]'
+                    fill='purple'
                 />
             </div>
             <div className="h-screen w-screen relative dark:bg-black-100 bg-white  dark:bg-grid-white/[0.04] bg-grid-black/[0.01] flex items-center justify-center">
