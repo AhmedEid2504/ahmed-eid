@@ -38,7 +38,7 @@ const Hero = () => {
                         className='text-2xl md:text-3xl lg:text-4xl text-start' 
                     />
                     <TextGenerateEffect 
-                        words='< reactFrontEndDeveloper'
+                        words='<ReactFrontEndDeveloper'
                         textColor='text-clr_1'
                         delay={0.5}
                         duration={5}
