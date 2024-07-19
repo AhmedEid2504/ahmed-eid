@@ -4,6 +4,7 @@ import React, { use, useState } from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import  MagicButton from './ui/MagicButton'
+import { FaArrowAltCircleDown, FaArrowDown, FaLocationArrow } from 'react-icons/fa';
 
 const Hero = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -51,6 +52,8 @@ const Hero = () => {
                 <div className='mt-8'>
                     <MagicButton 
                         content='Show Projects'
+                        icon={<FaArrowDown />}
+                        position='right'
                     />
                 </div>
             </div>
