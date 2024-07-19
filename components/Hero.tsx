@@ -31,7 +31,15 @@ const Hero = () => {
             <div className='absolute w-screen h-screen top-0 left-0 flex flex-col justify-center items-center'>
                 <div className='max-w-[89vw]'>
                     <TextGenerateEffect 
-                        words='Hi, I&apos;m Ahmed Eid and I&apos;m a React Front-End Developer' 
+                        words='Hi, I&apos;m Ahmed Eid and I&apos;m a' 
+                        textColor='text-white'
+                        textFamily='font-sans'
+                        className='text-3xl md:text-4xl lg:text-5xl text-center' 
+                    />
+                    <TextGenerateEffect 
+                        words='React Front-End Developer'
+                        textColor='text-clr_1'
+                        textFamily='font-serif'
                         className='text-3xl md:text-4xl lg:text-5xl text-center' 
                     />
                 </div>
