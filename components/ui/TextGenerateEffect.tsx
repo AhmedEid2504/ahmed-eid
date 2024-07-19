@@ -6,6 +6,8 @@ import { cn } from "@/utils/cn";
 type TextGenerateEffectProps = {
   words: string;
   textColor: string;
+  delay?: number;
+  duration?: number;
   textFamily?: string;
   className?: string;
 };
@@ -13,11 +15,14 @@ type TextGenerateEffectProps = {
 export const TextGenerateEffect = ({
   words,
   textColor,
+  delay,
+  duration,
   textFamily,
   className,
 }: TextGenerateEffectProps ) => {
   const [scope, animate] = useAnimate();
   let wordsArray = words.split(" ");
+  
   useEffect(() => {
     animate(
       "span",
@@ -25,8 +30,8 @@ export const TextGenerateEffect = ({
         opacity: 1,
       },
       {
-        duration: 2,
-        delay: stagger(0.2),
+        duration: duration || 2,
+        delay: stagger(delay || 0.2),
       }
     );
   }, [scope.current]);
@@ -38,6 +43,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
+              className='opacity-0' 
             >
               {word}{" "}
             </motion.span>

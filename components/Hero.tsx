@@ -33,14 +33,17 @@ const Hero = () => {
                     <TextGenerateEffect 
                         words='Hi, I&apos;m Ahmed Eid and I&apos;m a' 
                         textColor='text-white'
+                        delay={0.2}
                         textFamily='font-sans'
                         className='text-3xl md:text-4xl lg:text-5xl text-center' 
                     />
                     <TextGenerateEffect 
-                        words='React Front-End Developer'
+                        words='< React Front-End Developer />'
                         textColor='text-clr_1'
+                        delay={0.8}
+                        duration={5}
                         textFamily='font-serif'
-                        className='text-3xl md:text-4xl lg:text-5xl text-center' 
+                        className='text-3xl md:text-4xl lg:text-5xl text-center ' 
                     />
                 </div>
                 <div className='mt-8'>
