@@ -1,27 +1,25 @@
 "use client";
 
-import React, { use, useState } from 'react'
 import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import  MagicButton from './ui/MagicButton'
 import {  FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
-
     return (
         <div>
             <div>
                 <Spotlight 
-                    className='max-sm:top-[21vh] sm:top-[12vh] md:top-[5vh] -right-10 h-screen w-[100vw]'
+                    className='max-sm:top-[21dvh] sm:top-[12dvh] md:top-[5dvh] -right-10 h-screen w-[100vw]'
                     fill='#00fff9'
                 />
 
                 <Spotlight 
-                    className='max-sm:top-[19vh] sm:top-[10vh] md:top-[3vh] -right-10 h-screen w-[100vw]'
+                    className='max-sm:top-[19dvh] sm:top-[10dvh] md:top-[3dvh] -right-10 h-screen w-[100vw]'
                     fill='#00a2c5'
                 />
                 <Spotlight 
-                    className='max-sm:top-[17vh] sm:top-[8vh] md:top-[1vh] -right-10 h-screen w-[100vw]'
+                    className='max-sm:top-[17dvh] sm:top-[8dvh] md:top-[1dvh] -right-10 h-screen w-[100vw]'
                     fill='purple'
                 />
             </div>
