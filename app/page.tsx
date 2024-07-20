@@ -28,9 +28,6 @@ export default function Home() {
           <section id="3" className="w-full">
             <Projects />
           </section>
-          <section id="4" className="w-full">
-            <Projects />
-          </section>
         </div>
       </main>
     </>

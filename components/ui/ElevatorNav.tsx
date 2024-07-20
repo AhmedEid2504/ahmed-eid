@@ -57,7 +57,7 @@ const ElevatorNav = () => {
           <BsDot className="text-5xl text-white" />
         </button>
         <div
-          className="absolute left-5"
+          className="absolute"
           style={{
             top: `${activeIndex * 35}%`,
             transform: 'translateY(- 50%)',
