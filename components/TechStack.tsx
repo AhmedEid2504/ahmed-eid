@@ -30,18 +30,18 @@ const toolsStack = [
 
 const TechStack = () => {
   return (
-    <div className='relative h-full w-screen'>
-      <div className="-z-50 h-full w-screen absolute dark:bg-black-100 bg-white dark:bg-grid-white/[0.04] bg-grid-black/[0.01] flex items-center justify-center">
+    <div className='relative h-full min-h-screen w-screen'>
+      <div className="-z-50 h-full w-screen absolute dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.01] flex items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
       <div className='z-50 h-full w-screen text-white pt-5 p-20 pr-[80px]'>
         <div className='flex flex-col justify-center items-center '>
           
           <div className='text-2xl md:text-3xl lg:text-4xl text-start'>
-            <h1>My Tech Stack</h1>
+            <h1>Tech Stack</h1>
           </div>
           <div className='flex flex-col gap-5 p-5'>
-            <div className='flex flex-col items-center justify-center rounded-md bg-black bg-opacity-30 shadow-lg p-5'>
+            <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
               <h1 className='text-2xl'>Frontend</h1>
               <div className='flex flex-wrap rounded-md gap-5 justify-center items-center p-5 bg-opacity-15'>
                 {frontEndStack.map((tech, index) => (
@@ -50,7 +50,7 @@ const TechStack = () => {
               </div>
             </div>
             <div className='flex flex-wrap gap-5'>
-              <div className='flex flex-col items-center justify-center rounded-md bg-black bg-opacity-30 shadow-lg p-5'>
+              <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
                 <h1 className='text-2xl'>Backend</h1>
                 <div className='flex flex-wrap rounded-md gap-5 justify-center items-center p-5 bg-opacity-15'>
                   {backEndStack.map((tech, index) => (
@@ -58,7 +58,7 @@ const TechStack = () => {
                   ))}
                 </div>
               </div>
-              <div className='flex flex-col items-center justify-center rounded-md bg-black bg-opacity-30 shadow-lg p-5'>
+              <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
                 <h1 className='text-2xl'>Tools</h1>
                 <div className='flex flex-wrap rounded-md gap-5 justify-center items-center p-5 bg-opacity-15'>
                   {toolsStack.map((tech, index) => (
