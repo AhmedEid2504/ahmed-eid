@@ -67,9 +67,11 @@
   
 }
 /* hide scrollbar */
-::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none;
 }
+
+
 
 @layer base {
   * {
