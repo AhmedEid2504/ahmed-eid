@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 
 import React from 'react';
 import Image from 'next/image';
+import Scroller from './ui/Scroller';
 
 const frontEndStack = [
   { src: '/images/html.png', alt: 'html' },
@@ -32,37 +33,7 @@ const toolsStack = [
 
 
 const TechStack = () => {
-    const scrollersRef = useRef<NodeListOf<Element> | null>(null);
     
-      useEffect(() => {
-        scrollersRef.current = document.querySelectorAll('.scroller');
-    
-        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-          addAnimation();
-        }
-    
-        function addAnimation() {
-          scrollersRef.current?.forEach((scroller) => {
-            // add data-animated="true" to every `.scroller` on the page
-            scroller.setAttribute("data-animated", "true");
-    
-            // Make an array from the elements within `.scroller-inner`
-            const scrollerInner = scroller.querySelector(".scroller__inner");
-            if (scrollerInner) {
-              const scrollerContent = Array.from(scrollerInner.children);
-    
-              // For each item in the array, clone it
-              // add aria-hidden to it
-              // add it into the `.scroller-inner`
-              scrollerContent.forEach((item) => {
-                const duplicatedItem = item.cloneNode(true) as HTMLElement;
-                duplicatedItem.setAttribute("aria-hidden", "true");
-                scrollerInner.appendChild(duplicatedItem);
-              });
-            }
-          });
-        }
-      }, []);
   return (
     <div className='relative h-full min-h-screen w-screen'>
       <div className="-z-50 h-full w-screen absolute dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.01] flex items-center justify-center">
@@ -74,38 +45,11 @@ const TechStack = () => {
           <div className='text-2xl md:text-3xl lg:text-4xl text-start'>
             <h1>Tech Stack</h1>
           </div>
-          <div className='flex flex-col gap-5 p-5 justify-center items-center'>
-            <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
-              <h1 className='text-2xl'>Frontend</h1>
-              <div className='scroller' data-speed="slow" data-direction="left">
-                <ul className='scroller__inner'>
-                  {frontEndStack.map((tech, index) => (
-                    <Image className='bg-white' key={index} src={tech.src} width={100} height={100} alt={tech.alt} />
-                  ))}
-                </ul>
-              </div>
-            </div>
-              <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
-                <h1 className='text-2xl'>Backend</h1>
-                <div className='scroller' data-speed="slow" data-direction="right">
-                  <ul className='scroller__inner'>
-                    {backEndStack.map((tech, index) => (
-                      <Image className='bg-white' key={index} src={tech.src} width={100} height={100} alt={tech.alt} />
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
-                <h1 className='text-2xl'>Tools</h1>
-                <div className='scroller'>
-                  <ul className='scroller__inner'>
-                    {toolsStack.map((tech, index) => (
-                      <Image className='bg-white' key={index} src={tech.src} width={100} height={100} alt={tech.alt} />
-                    ))}
-                  </ul>
-                </div>
-              </div>
 
+          <div className='flex flex-col gap-5 p-5 justify-center items-center'>
+            <Scroller type='image' title='Frontend' speed='slow' direction='left' stack={frontEndStack} />
+            <Scroller type='image' title='Backend' speed='slow' direction='right' stack={backEndStack} />
+            <Scroller type='image' title='Tools' direction='left' stack={toolsStack} />
           </div>
         </div>
       </div>
