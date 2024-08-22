@@ -77,7 +77,7 @@ const TechStack = () => {
           <div className='flex flex-col gap-5 p-5 justify-center items-center'>
             <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
               <h1 className='text-2xl'>Frontend</h1>
-              <div className='scroller'>
+              <div className='scroller' data-speed="slow" data-direction="left">
                 <ul className='scroller__inner'>
                   {frontEndStack.map((tech, index) => (
                     <Image className='bg-white' key={index} src={tech.src} width={100} height={100} alt={tech.alt} />
@@ -87,7 +87,7 @@ const TechStack = () => {
             </div>
               <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5'>
                 <h1 className='text-2xl'>Backend</h1>
-                <div className='scroller'>
+                <div className='scroller' data-speed="slow" data-direction="right">
                   <ul className='scroller__inner'>
                     {backEndStack.map((tech, index) => (
                       <Image className='bg-white' key={index} src={tech.src} width={100} height={100} alt={tech.alt} />
