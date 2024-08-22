@@ -7,14 +7,8 @@ import {  FaArrowDown } from 'react-icons/fa';
 
 const Hero = () => {
 
-    // const handleScroll = () => {
-    //     console.log('scrolling')
-    //     document.getElementById('tech-stack')?.scrollIntoView({ behavior: 'smooth' });
-    // };
-
-
     return (
-        <div>
+        <div className=''>
             <div className='-z-10'>
                 <Spotlight 
                     className='max-sm:top-[21dvh] sm:top-[12dvh] md:top-[5dvh] -right-10 h-screen w-[100vw]'
