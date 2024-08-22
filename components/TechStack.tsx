@@ -39,7 +39,7 @@ const TechStack = () => {
       <div className="-z-50 h-full w-screen absolute dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.01] flex items-center justify-center">
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
       </div>
-      <div className='z-50 h-full w-screen text-white pt-5 p-20 pr-[80px]'>
+      <div className='z-50 h-full w-screen text-white pt-20 p-5 pr-[20px]'>
         <div className='flex flex-col justify-center items-center '>
           
           <div className='text-2xl md:text-3xl lg:text-4xl text-start'>
@@ -49,7 +49,7 @@ const TechStack = () => {
           <div className='flex flex-col gap-5 p-5 justify-center items-center'>
             <Scroller type='image' title='Frontend' speed='slow' direction='left' stack={frontEndStack} />
             <Scroller type='image' title='Backend' speed='slow' direction='right' stack={backEndStack} />
-            <Scroller type='image' title='Tools' direction='left' stack={toolsStack} />
+            <Scroller type='image' title='Tools' speed='slow' direction='left' stack={toolsStack} />
           </div>
         </div>
       </div>
