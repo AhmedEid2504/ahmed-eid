@@ -66,10 +66,17 @@
   }
   
 }
-/* hide scrollbar */
-*::-webkit-scrollbar {
+
+/* *::-webkit-scrollbar {
   display: none;
+} */
+
+* {
+  scrollbar-width: none;
 }
+
+
+
 
 
 
@@ -107,7 +114,7 @@
 }
 
 .scroller[data-animated="true"] {
-  overflow: hidden;
+  overflow: auto;
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
@@ -123,6 +130,9 @@
   flex-wrap: nowrap;
   animation: scroll var(--_animation-duration, 40s)
     var(--_animation-direction, forwards) linear infinite;
+}
+.scroller[data-animated="true"][data-paused="true"] .scroller__inner {
+  animation-play-state: paused;
 }
 
 .scroller[data-direction="right"] {

@@ -26,6 +26,7 @@ const Scroller = ({
     useEffect(() => {
         if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
             addAnimation();
+            stopAnimationOnHover();
         }
 
         function addAnimation() {
@@ -42,6 +43,16 @@ const Scroller = ({
                         scrollerInner.appendChild(duplicatedItem);
                     });
                 }
+            });
+        }
+        function stopAnimationOnHover() {
+            scrollersRef.current?.forEach((scroller) => {
+                scroller.addEventListener("mouseenter", () => {
+                    scroller.setAttribute("data-paused", "true");
+                });
+                scroller.addEventListener("mouseleave", () => {
+                    scroller.setAttribute("data-paused", "false");
+                });
             });
         }
     }, []);
