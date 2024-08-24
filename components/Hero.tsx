@@ -4,11 +4,13 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import  MagicButton from './ui/MagicButton'
 import {  FaArrowDown } from 'react-icons/fa';
+import GridBG from './ui/GridBG';
 
 const Hero = () => {
 
     return (
-        <div className=''>
+        <div className='relative h-full min-h-[100dvh] w-screen'>
+            <GridBG />
             <div className='-z-10'>
                 <Spotlight 
                     className='max-sm:top-[21dvh] sm:top-[12dvh] md:top-[5dvh] -right-10 h-screen w-[100vw]'
@@ -24,9 +26,7 @@ const Hero = () => {
                     fill='purple'
                 />
             </div>
-            <div className="h-screen w-screen relative dark:bg-black-100 bg-white  dark:bg-grid-white/[0.04] bg-grid-black/[0.01] flex items-center justify-center">
-                <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-            </div>
+            
             <div className='z-50 absolute w-screen h-screen top-0 left-0 flex flex-col justify-center items-center'>
                 <div className='max-w-[89vw]'>
                     <TextGenerateEffect 
