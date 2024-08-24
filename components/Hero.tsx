@@ -5,6 +5,8 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import  MagicButton from './ui/MagicButton'
 import {  FaArrowDown } from 'react-icons/fa';
 import GridBG from './ui/GridBG';
+import Loader from './ui/Loader';
+import { useState } from 'react';
 
 const Hero = () => {
 
@@ -27,7 +29,7 @@ const Hero = () => {
                 />
             </div>
             
-            <div className='z-50 absolute w-screen h-screen top-0 left-0 flex flex-col justify-center items-center'>
+            <div className='z-40 absolute w-screen h-screen top-0 left-0 flex flex-col justify-center items-center'>
                 <div className='max-w-[89vw]'>
                     <TextGenerateEffect 
                         words='Hi, I&apos;m Ahmed Eid and I&apos;m a' 

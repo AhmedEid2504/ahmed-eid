@@ -4,7 +4,6 @@ import Projects from "@/components/Projects";
 import TechStack from "@/components/TechStack";
 import ElevatorNav from "@/components/ui/ElevatorNav";
 
-
 export default function Home() {
 
   return (

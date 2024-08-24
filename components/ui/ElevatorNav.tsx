@@ -3,6 +3,7 @@ import { BsDot } from 'react-icons/bs';
 import { GiElevator } from 'react-icons/gi';
 
 const ElevatorNav = () => {
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -19,6 +20,7 @@ const ElevatorNav = () => {
         top: scrollDirection * scrollAmount,
         behavior: 'smooth'
       });
+
     };
 
     // Attach wheel event listener
@@ -62,6 +64,10 @@ const ElevatorNav = () => {
       });
     };
   }, []);
+
+
+  
+
 
   return (
     <div className="fixed z-50 top-[35vh] right-0 w-[10vw] bg-transparent">
