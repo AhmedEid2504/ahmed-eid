@@ -71,9 +71,7 @@
   display: none;
 } */
 
-* {
-  scrollbar-width: none;
-}
+
 
 
 
@@ -113,7 +111,7 @@
 }
 
 .scroller[data-animated="true"] {
-  overflow: auto;
+  overflow: hidden;
   -webkit-mask: linear-gradient(
     90deg,
     transparent,
