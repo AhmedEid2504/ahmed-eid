@@ -4,7 +4,7 @@ import GridBG from './ui/GridBG'
 
 const Projects = () => {
   return (
-    <div className='h-screen w-screen flex text-white justify-center items-center'>
+    <div className='relative h-screen w-screen flex text-white justify-center items-center'>
         <GridBG />
         Projects
     </div>
