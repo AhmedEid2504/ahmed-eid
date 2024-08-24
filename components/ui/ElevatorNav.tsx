@@ -5,9 +5,37 @@ import { GiElevator } from 'react-icons/gi';
 const ElevatorNav = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  useEffect(() => {
+    const handleWheel = (event: WheelEvent) => {
+      // Prevent default scroll behavior
+      event.preventDefault();
+      
+      // Determine scroll direction and amount
+      const scrollAmount = window.innerHeight;
+      const scrollDirection = event.deltaY > 0 ? 1 : -1;
+      
+      // Smooth scroll using window.scrollTo with a smooth scroll behavior
+      window.scrollBy({
+        top: scrollDirection * scrollAmount,
+        behavior: 'smooth'
+      });
+    };
+
+    // Attach wheel event listener
+    window.addEventListener('wheel', handleWheel, { passive: false });
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
   const handleScroll = (id: string, index: number) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
-    setActiveIndex(index);
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setActiveIndex(index);
+    }
   };
 
   useEffect(() => {
