@@ -7,28 +7,52 @@ const ElevatorNav = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    let touchStartY = 0;
+
     const handleWheel = (event: WheelEvent) => {
       // Prevent default scroll behavior
       event.preventDefault();
-      
+
       // Determine scroll direction and amount
       const scrollAmount = window.innerHeight;
       const scrollDirection = event.deltaY > 0 ? 1 : -1;
-      
+
       // Smooth scroll using window.scrollTo with a smooth scroll behavior
       window.scrollBy({
         top: scrollDirection * scrollAmount,
         behavior: 'smooth'
       });
-
     };
 
-    // Attach wheel event listener
-    window.addEventListener('wheel', handleWheel, { passive: false });
+    const handleTouchStart = (event: TouchEvent) => {
+      touchStartY = event.touches[0].clientY;
+    };
 
-    // Cleanup event listener on component unmount
+    const handleTouchMove = (event: TouchEvent) => {
+      // Prevent default scroll behavior
+      event.preventDefault();
+
+      const touchEndY = event.touches[0].clientY;
+      const scrollAmount = window.innerHeight;
+      const scrollDirection = touchStartY > touchEndY ? 1 : -1;
+
+      // Smooth scroll using window.scrollTo with a smooth scroll behavior
+      window.scrollBy({
+        top: scrollDirection * scrollAmount,
+        behavior: 'smooth'
+      });
+    };
+
+    // Attach event listeners
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: false });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+
+    // Cleanup event listeners on component unmount
     return () => {
       window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
     };
   }, []);
 
