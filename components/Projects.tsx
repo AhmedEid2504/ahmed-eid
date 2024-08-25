@@ -65,6 +65,7 @@ const projects = [
     images: [
       { src: '/images/projects/project-4/project4-1.png', alt: 'Project 4 Image' },
       { src: '/images/projects/project-4/project4-2.png', alt: 'Project 4 Image' },
+      { src: '/images/projects/project-4/project4-3.png', alt: 'Project 4 Image' },
     ],
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     description: 'Project 1 Description',
