@@ -1,22 +1,45 @@
 import React from 'react'
 import Image from 'next/image'
+import Slider from './Slider'
 
-const ProjectCard = () => {
+type ProjectCardProps = {
+  name: string
+  title: string
+  images: { src: string; alt: string }[]
+  tags: string[]
+  description: string
+  demoLink?: string
+  codeLink?: string
+}
+
+const ProjectCard = ({
+  name, title, images, tags, description, demoLink, codeLink
+}:ProjectCardProps) => {
   return (
     <div className='flex flex-col justify-center items-center p-5 rounded-lg shadow-md shadow-clr_4 bg-clr_1 bg-opacity-15 w-fit'>
-        <Image src='/images/projects/project-1/project1-2.png' alt='project-1' width={300} height={300} />
+        {/* images slider */}
+        <Slider images={images} />
+        {/* description */}
         <div className='flex flex-col justify-center items-center gap-2 pt-2'>
-            <h1>High Five</h1>
+            <h1>{name}</h1>
             {/* tags */}
             <div className='flex justify-center items-center gap-2'>
-                <span className='bg-clr_3 text-white p-1 rounded-md'>React</span>
-                <span className='bg-clr_3 text-white p-1 rounded-md'>Next.js</span>
-                <span className='bg-clr_3 text-white p-1 rounded-md'>TailwindCSS</span>
+              {tags.map((tag, index) => (
+                <span key={index} className='bg-clr_3 text-white p-1 rounded-md'>{tag}</span>
+              ))}
             </div>
-            <h2>E-commerce</h2>
+            <h2>{title}</h2>
             <div className='flex justify-center items-center gap-3'>
-                <button className='bg-clr_1 text-white p-2 rounded-md'>View Project</button>
-                <button className='bg-clr_1 text-white p-2 rounded-md'>View Code</button>
+                <a href={demoLink} target='_blank'>
+                  <button className='bg-clr_1 text-white p-2 rounded-md'>
+                    Demo
+                  </button>
+                </a>
+                <a href={codeLink} target='_blank'>
+                  <button className='bg-clr_1 text-white p-2 rounded-md'>
+                    Code
+                  </button>
+                </a>
             </div>
         </div>
     </div>
