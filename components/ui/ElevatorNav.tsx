@@ -94,35 +94,32 @@ const ElevatorNav = () => {
 
 
   return (
-    <div className="fixed z-50 top-[35vh] right-0 w-[10vw] bg-transparent">
-      <div className="z-40 relative flex flex-col justify-center items-center gap-[25px]">
+    <div className="fixed z-40 top-[35vh] right-0 w-[7vw] bg-transparent">
+      <div className="z-30 relative flex flex-col justify-center items-center gap-[60px]">
         <button
           onClick={() => handleScroll('1', 0)}
-          className="relative"
+          className="relative w-3 bg-white rounded-full h-3"
         >
-          <BsDot className="text-5xl text-white" />
         </button>
         <button
           onClick={() => handleScroll('2', 1)}
-          className="relative"
+          className="relative w-3 bg-white rounded-full h-3"
         >
-          <BsDot className="text-5xl text-white" />
         </button>
         <button
           onClick={() => handleScroll('3', 2)}
-          className="relative"
+          className="relative w-3 bg-white rounded-full h-3"
         >
-          <BsDot className="text-5xl text-white" />
         </button>
         <div
-          className="absolute"
+          className="absolute -translate-y-5"
           style={{
-            top: `${activeIndex * 35}%`,
+            top: `${activeIndex * 50}%`,
             transform: 'translateY(- 50%)',
             transition: 'top 0.8s ease',
           }}
         >
-          <GiElevator className="z-10 text-5xl text-white" />
+          <GiElevator className=" text-4xl text-white" />
         </div>
       </div>
     </div>

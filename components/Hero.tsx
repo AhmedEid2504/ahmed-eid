@@ -30,7 +30,7 @@ const Hero = () => {
             </div>
             
             <div className='z-40 absolute w-screen h-screen top-0 left-0 flex flex-col justify-center items-center'>
-                <div className='max-w-[89vw]'>
+                <div className='max-w-[89vw] max-sm:max-w-[80vw]'>
                     <TextGenerateEffect 
                         words='Hi, I&apos;m Ahmed Eid and I&apos;m a' 
                         textColor='text-white'
