@@ -32,7 +32,7 @@ const Slider = ({ images }: SliderProps) => {
     };
 
     return (
-        <div className='relative flex justify-center items-center gap-2'>
+        <div className='relative flex flex-wrap justify-center items-center gap-2'>
             <div className='flex ease-in duration-150 gap-2'>
                 <button
                     onClick={prevSlide}

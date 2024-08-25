@@ -8,9 +8,15 @@ const projects = [
     name: 'High Five',
     title: 'E-commerce Fashion Store',
     images: [
-      { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' },
       { src: '/images/projects/project-1/project1-1.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' }
+      { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' },
+      { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' },
+      { src: '/images/projects/project-1/project1-4.png', alt: 'Project 1 Image' },
+      { src: '/images/projects/project-1/project1-5.png', alt: 'Project 1 Image' },
+      { src: '/images/projects/project-1/project1-6.png', alt: 'Project 1 Image' },
+
+
+      
     ],
     tags: ['HTML', 'CSS', 'JavaScript'],
     description: 'Project 1 Description',
@@ -18,16 +24,15 @@ const projects = [
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
   {
-    name: 'Project 1',
-    title: 'Project 1 Title',
+    name: 'Meme Maker',
+    title: 'Application for creating memes',
     images: [
-      { src: '/images/projects/project-1/project1-1.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' }
+      { src: '/images/projects/project-2/Meme-Maker-1.png', alt: 'Project 1 Image' },
+      { src: '/images/projects/project-2/Meme-Maker-2.png', alt: 'Project 1 Image' },
     ],
-    tags: ['tag1', 'tag2'],
+    tags: ['React', 'TailwindCSS', 'Firebase'],
     description: 'Project 1 Description',
-    demoLink: 'https://high-five-swart.vercel.app/',
+    demoLink: 'https://meme-maker-nu.vercel.app/',
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
   {
