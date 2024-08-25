@@ -18,7 +18,7 @@ const ProjectCard = ({
   name, title, images, tags, description, demoLink, codeLink
 }:ProjectCardProps) => {
   return (
-    <div className='flex flex-col justify-center items-center p-5 max-sm:p-2 rounded-lg shadow-sm shadow-clr_1 bg-clr_1 bg-opacity-15 w-fit'>
+    <div className='flex flex-col justify-center items-center p-5 max-sm:p-2 rounded-lg shadow-sm shadow-clr_1 bg-clr_1 bg-opacity-15 w-[70vw]'>
         {/* images slider */}
         <Slider images={images} />
         {/* description */}
