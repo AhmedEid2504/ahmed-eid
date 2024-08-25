@@ -1,12 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
 import Slider from './Slider'
 import MagicButton from './MagicButton'
-import { FaArrowDown } from 'react-icons/fa'
+
 
 type ProjectCardProps = {
   name: string
-  title: string
+  title?: string
   images: { src: string; alt: string }[]
   tags: string[]
   description: string
@@ -30,7 +29,7 @@ const ProjectCard = ({
                 <span key={index} className='bg-black bg-opacity-35 text-white p-2 max-sm:text-xs max-sm:pt-0.5 max-sm:py-0 rounded-md'>{tag}</span>
               ))}
             </div>
-            <h1 className='text-sm'>{title}</h1>
+            <h1 className='text-sm'>{title || ""}</h1>
             <div className='flex justify-center items-center gap-3'>
                 <a href={demoLink} target='_blank'>
                   <MagicButton

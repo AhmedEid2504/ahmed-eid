@@ -5,6 +5,19 @@ import ElementSlider from './ui/ElementSlider'
 
 const projects = [
   {
+    name: 'Ahmed Eid Portfolio',
+    title: '',
+    images: [
+      { src: '/images/projects/project-9/project9-1.png', alt: 'Project 9 Image' },
+      { src: '/images/projects/project-9/project9-2.png', alt: 'Project 9 Image' },
+      { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image' },
+    ],
+    tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
+    description: 'Project 1 Description',
+    demoLink: 'https://ahmed-eid-ashen.vercel.app/',
+    codeLink:''
+  },
+  {
     name: 'High Five',
     title: 'E-commerce Fashion Store',
     images: [
@@ -27,66 +40,86 @@ const projects = [
     name: 'Meme Maker',
     title: 'Application for creating memes',
     images: [
-      { src: '/images/projects/project-2/Meme-Maker-1.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-2/Meme-Maker-2.png', alt: 'Project 1 Image' },
+      { src: '/images/projects/project-2/Meme-Maker-1.png', alt: 'Project 2 Image' },
+      { src: '/images/projects/project-2/Meme-Maker-2.png', alt: 'Project 2 Image' },
     ],
-    tags: ['React', 'TailwindCSS', 'Firebase'],
+    tags: ['React', 'JavaScript', 'TailwindCSS', 'Firebase'],
     description: 'Project 1 Description',
     demoLink: 'https://meme-maker-nu.vercel.app/',
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
   {
-    name: 'Project 1',
-    title: 'Project 1 Title',
+    name: 'Airbnb Clone',
+    title: '',
     images: [
-      { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-1.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' }
+      { src: '/images/projects/project-3/project3-1.png', alt: 'Project 3 Image' },
     ],
-    tags: ['tag1', 'tag2'],
+    tags: ['React', 'JavaScript'],
     description: 'Project 1 Description',
-    demoLink: 'https://high-five-swart.vercel.app/',
+    demoLink: 'https://react-scrimba-airbnb.vercel.app/',
+    codeLink:'https://react-scrimba-airbnb.vercel.app/'
+  },
+  {
+    name: 'UBI Order',
+    title: '',
+    images: [
+      { src: '/images/projects/project-4/project4-1.png', alt: 'Project 4 Image' },
+      { src: '/images/projects/project-4/project4-2.png', alt: 'Project 4 Image' },
+    ],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+    description: 'Project 1 Description',
+    demoLink: 'https://ubi-order.vercel.app/',
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
   {
-    name: 'Project 1',
-    title: 'Project 1 Title',
+    name: 'Comfy House',
+    title: '',
     images: [
-      { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-1.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' }
+      { src: '/images/projects/project-5/project5-1.png', alt: 'Project 5 Image 1' },
+      { src: '/images/projects/project-5/project5-2.png', alt: 'Project 5 Image 2' },
+      { src: '/images/projects/project-5/project5-3.png', alt: 'Project 5 Image 3' },
     ],
-    tags: ['tag1', 'tag2'],
+    tags: ['HTML', 'CSS', 'JavaScript'],
     description: 'Project 1 Description',
-    demoLink: 'https://high-five-swart.vercel.app/',
-    codeLink:'https://github.com/AhmedEid2504/High-Five'
+    demoLink: 'https://comfy-house-two.vercel.app/',
+    codeLink:'',
   },
   {
-    name: 'Project 1',
-    title: 'Project 1 Title',
+    name: 'Tindog',
+    title: '',
     images: [
-      { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-1.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' }
+      { src: '/images/projects/project-6/project6-1.png', alt: 'Project 6 Image 1' },
+      { src: '/images/projects/project-6/project6-2.png', alt: 'Project 6 Image 2' },
+      { src: '/images/projects/project-6/project6-3.png', alt: 'Project 6 Image 3' },
     ],
-    tags: ['tag1', 'tag2'],
+    tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
     description: 'Project 1 Description',
-    demoLink: 'https://high-five-swart.vercel.app/',
-    codeLink:'https://github.com/AhmedEid2504/High-Five'
+    demoLink: 'https://tindog-iota-ten.vercel.app/',
+    codeLink:'',
   },
   {
-    name: 'Project 1',
-    title: 'Project 1 Title',
+    name: 'Cinema Maze',
+    title: '',
     images: [
-      { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-1.png', alt: 'Project 1 Image' },
-      { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' }
+      { src: '/images/projects/project-7/project7-1.png', alt: 'Project 7 Image' },
     ],
-    tags: ['tag1', 'tag2'],
+    tags: ['React', 'JavaScript', 'Movies Search API'],
     description: 'Project 1 Description',
-    demoLink: 'https://high-five-swart.vercel.app/',
-    codeLink:'https://github.com/AhmedEid2504/High-Five'
+    demoLink: 'https://cinema-maze.vercel.app/',
+    codeLink:''
   },
+  {
+    name: 'Community Chat',
+    title: '',
+    images: [
+      { src: '/images/projects/project-8/project8-1.png', alt: 'Project 8 Image' },
+    ],
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    description: 'Project 1 Description',
+    demoLink: 'https://community-chat-sand.vercel.app/',
+    codeLink:''
+  },
+  
 ]
 
 const Projects = () => {

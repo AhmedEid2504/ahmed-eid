@@ -69,7 +69,7 @@ const ElementSlider = ({projects}:ElementSliderProps) => {
                         key={index}
                         className={` text-white p-1 rounded-md ${currentIndex === index ? 'border-2 border-clr_1' : ''}`}
                     >
-                        <div className='max-sm:w-[60px] max-sm:text-xs'>
+                        <div className='max-sm:w-[60px] max-sm:text-xs flex flex-col justify-center items-center '>
                             <Image
                                 src={project.images[0].src}
                                 alt={project.images[0].alt}
