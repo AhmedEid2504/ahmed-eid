@@ -45,7 +45,7 @@ const TechStack = () => {
             <h1>Tech Stack</h1>
           </div>
 
-          <div className='flex flex-col gap-5 p-5 justify-center items-center'>
+          <div className='flex flex-col gap-5 max-sm:gap-2 max-sm:p-1 p-5 justify-center items-center'>
             <Scroller type='image' title='Frontend' speed='slow' direction='left' stack={frontEndStack} />
             <Scroller type='image' title='Backend' speed='slow' direction='right' stack={backEndStack} />
             <Scroller type='image' title='Tools' speed='slow' direction='left' stack={toolsStack} />

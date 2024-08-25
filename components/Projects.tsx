@@ -1,7 +1,6 @@
 
 import React from 'react'
 import GridBG from './ui/GridBG'
-import ProjectCard from './ui/ProjectCard'
 import ElementSlider from './ui/ElementSlider'
 
 const projects = [
