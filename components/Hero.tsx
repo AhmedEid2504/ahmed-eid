@@ -9,6 +9,8 @@ import Loader from './ui/Loader';
 import { useState } from 'react';
 
 const Hero = () => {
+    
+        
 
     return (
         <div className='relative h-full min-h-[100dvh] w-screen'>
@@ -44,7 +46,7 @@ const Hero = () => {
                         delay={0.5}
                         duration={5}
                         textFamily='font-serif'
-                        className='text-lg md:text-2xl lg:text-3xl text-start ' 
+                        className='text-lg max-sm:text-sm md:text-2xl lg:text-3xl text-start ' 
                     />
                     <TextGenerateEffect 
                         words="talented = ' true '"
@@ -52,7 +54,7 @@ const Hero = () => {
                         delay={0.5}
                         duration={8}
                         textFamily='font-serif'
-                        className='text-lg md:text-2xl lg:text-3xl text-start pl-10 ' 
+                        className='text-lg max-sm:text-sm md:text-2xl lg:text-3xl text-start pl-10 ' 
                     />
                     <TextGenerateEffect 
                         words='/>'
@@ -60,15 +62,17 @@ const Hero = () => {
                         delay={0.5}
                         duration={5}
                         textFamily='font-serif'
-                        className='text-lg md:text-2xl lg:text-3xl text-start ' 
+                        className='text-lg max-sm:text-sm md:text-2xl lg:text-3xl text-start ' 
                     />
                 </div>
                 <div className='mt-8'>
-                    <MagicButton 
-                        content='Show Projects'
-                        icon={<FaArrowDown />}
-                        position='right'
-                    />
+                    <a href="#3">
+                        <MagicButton 
+                            content='Show Projects'
+                            icon={<FaArrowDown />}
+                            position='right'
+                        />
+                    </a>
                 </div>
             </div>
         </div>

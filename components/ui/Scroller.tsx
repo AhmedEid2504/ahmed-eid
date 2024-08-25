@@ -58,8 +58,8 @@ const Scroller = ({
     }, []);
 
     return (
-        <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5 max-sm:p-2'>
-            <h1 className='text-2xl'>{title}</h1>
+        <div className='flex flex-col items-center justify-center rounded-md bg-black-200 bg-opacity-30 shadow-lg p-5 max-sm:p-1'>
+            <h1 className='text-2xl max-sm:text-lg'>{title}</h1>
             <div
                 className='scroller'
                 ref={(el: HTMLDivElement | null) => { if (el) scrollersRef.current.push(el); }}

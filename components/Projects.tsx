@@ -5,7 +5,7 @@ import ElementSlider from './ui/ElementSlider'
 
 const projects = [
   {
-    name: 'Ahmed Eid Portfolio',
+    name: 'Portfolio',
     title: '',
     images: [
       { src: '/images/projects/project-9/project9-1.png', alt: 'Project 9 Image' },
@@ -124,12 +124,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className='relative h-screen w-screen text-white justify-center items-center'>
+    <div className='relative min-h-screen h-full w-screen text-white justify-center items-center'>
         <GridBG />
-        <div className='h-[95dvh] w-screen overflow-hidden text-white pt-3 sm:pt-10 p-5 pr-[55px] flex flex-col justify-center items-center gap-3'>
+        <div className='h-full min-h-screen w-screen text-white  sm:pt-10 p-5  flex flex-col justify-center items-center gap-3'>
           <h1 className='text-3xl'>My Projects</h1>
             <div className='flex'>
-              <div className='h-fit flex flex-wrap justify-center items-center gap-5 bg-black bg-opacity-30 p-5 rounded-lg w-fit'>
+              <div className='h-full flex flex-wrap justify-center items-center gap-5 bg-black bg-opacity-30 p-5 rounded-lg w-fit'>
                 <ElementSlider projects={projects} />
               </div>
           </div>
