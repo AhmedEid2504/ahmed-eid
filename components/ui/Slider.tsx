@@ -40,7 +40,7 @@ const Slider = ({ images }: SliderProps) => {
                     {'<'}
                 </button>
                 <div
-                    className={`relative transition-opacity duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
+                    className={`relative transition-opacity cursor-pointer duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
                     onMouseEnter={() => setFade(true)}
                     onMouseLeave={() => setFade(true)}
                 >

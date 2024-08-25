@@ -13,7 +13,7 @@ const Modal = ({ imageSrc, imageAlt, onClose }: ModalProps) => {
             <div className='relative'>
                 <button
                     onClick={onClose}
-                    className='absolute -bottom-10 right-[50%] text-white text-2xl'
+                    className='absolute -bottom-10 max-sm:right-[46%] right-[50%] text-white text-4xl max-sm:text-2xl'
                 >
                     &times;
                 </button>
