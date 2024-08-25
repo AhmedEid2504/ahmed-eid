@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
+import ImageModal from './ImageModal'
+
+
 type SliderProps = {
     images: { src: string; alt: string }[]
 }
@@ -8,6 +11,7 @@ type SliderProps = {
 const Slider = ({ images }: SliderProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [fade, setFade] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         setFade(true);
@@ -46,6 +50,7 @@ const Slider = ({ images }: SliderProps) => {
                         alt={images[currentIndex].alt}
                         width={300}
                         height={200}
+                        onClick={() => setIsModalOpen(true)}
                     />
                 </div>
                 <button
@@ -63,6 +68,13 @@ const Slider = ({ images }: SliderProps) => {
                     ></button>
                 ))}
             </div>
+            {isModalOpen && (
+                <ImageModal
+                    imageSrc={images[currentIndex].src}
+                    imageAlt={images[currentIndex].alt}
+                    onClose={() => setIsModalOpen(false)}
+                />
+            )}
         </div>
     )
 }
