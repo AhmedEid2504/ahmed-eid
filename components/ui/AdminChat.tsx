@@ -24,6 +24,7 @@ const AdminChat = ({
     const [newMessage, setNewMessage] = useState("");
     const messagesEndRef = useRef<HTMLDivElement>(null); // Ref for auto-scrolling
 
+    // Fetch all users' chats without messages
     useEffect(() => {
         if (user && isAdmin) {
             const usersRef = collection(db, "users");
@@ -32,16 +33,9 @@ const AdminChat = ({
                 const chatsArray: { id: string; userId: string; [key: string]: any }[] = [];
                 snapshot.forEach((doc) => {
                     const userId = doc.id;
-                    const messagesRef = collection(db, "users", userId, "messages");
-                    const messageQuery = query(messagesRef);
-                    onSnapshot(messageQuery, (messageSnapshot) => {
-                        const lastMessage = messageSnapshot.docs[messageSnapshot.docs.length - 1]?.data();
-                        chatsArray.push({
-                            id: doc.id,
-                            userId: userId,
-                            lastMessage: lastMessage?.message || "No messages yet",
-                            lastMessageTimestamp: lastMessage?.timestamp,
-                        });
+                    chatsArray.push({
+                        id: doc.id,
+                        userId: userId,
                     });
                 });
                 setChats(chatsArray);
@@ -114,8 +108,6 @@ const AdminChat = ({
                         {chats.map((chat) => (
                             <div key={chat.id} onClick={() => setSelectedChat(chat)} className="p-2 border-b border-clr_1 cursor-pointer">
                                 <h2 className="text-clr_1 text-sm">Chat with {chat.userId}</h2>
-                                <p className="text-gray-400 text-xs">{chat.lastMessage}</p>
-                                <p className="text-gray-500 text-xs">{chat.lastMessageTimestamp ? formatDistanceToNow(new Date(chat.lastMessageTimestamp.seconds * 1000)) : "No messages"}</p>
                             </div>
                         ))}
                     </div>
@@ -123,67 +115,67 @@ const AdminChat = ({
 
                 {selectedChat && (
                     <>
-                    <div className="chat-header p-4 flex items-center justify-between">
+                    <div className='flex flex-col h-[100%]'>
+                    <div className="h-[10%] p-4 flex items-center justify-between">
                         <button onClick={() => setSelectedChat(null)}>
                             <FaArrowLeft className="text-xl text-clr_1" />
                         </button>
                     </div>
-                    <div className='flex flex-col h-[90%]'>
-                    <div className=' text-clr_1 h-[85%] px-4 py-2 flex flex-col overflow-y-auto'>
-                        <div className='flex flex-col gap-2'>
-                            {messages.map((message) => (
-                                <div
-                                    key={message.id}
-                                    className={`flex items-start gap-2 ${message.from === auth.currentUser?.uid ? "flex-row-reverse" : ""}`}
-                                >
-                                    <div className='flex flex-col items-center'>
-                                        <div className='rounded-full h-[40px] w-[40px] overflow-hidden'>
-                                            <Image className='rounded-full' src={message.userProfilePic || '/images/default-profile.jpg'} alt='User' width={40} height={40} />
-                                        </div>
-                                        <h2 className='text-sm text-clr_1'>{message.username}</h2>
-                                    </div>
+                        <div className=' text-clr_1 h-[85%] px-4 py-2 flex flex-col overflow-y-auto'>
+                            <div className='flex flex-col gap-2'>
+                                {messages.map((message) => (
                                     <div
-                                        className={`p-2 rounded-lg ${
-                                            message.from === auth.currentUser?.uid
-                                                ? "bg-clr_1 text-black"
-                                                : "bg-black bg-opacity-80 text-clr_1"
-                                        }`}
+                                        key={message.id}
+                                        className={`flex items-start gap-2 ${message.from === auth.currentUser?.uid ? "flex-row-reverse" : ""}`}
                                     >
-                                        {message.message}
-                                        <div className='text-xs text-white mt-1'>
-                                            {message.timestamp ? formatDistanceToNow(new Date(message.timestamp.seconds * 1000), { addSuffix: true }) : "No timestamp"}
+                                        <div className='flex flex-col items-center'>
+                                            <div className='rounded-full h-[40px] w-[40px] overflow-hidden'>
+                                                <Image className='rounded-full' src={message.userProfilePic || '/images/default-profile.jpg'} alt='User' width={40} height={40} />
+                                            </div>
+                                            <h2 className='text-sm text-clr_1'>{message.username}</h2>
+                                        </div>
+                                        <div
+                                            className={`p-2 rounded-lg ${
+                                                message.from === auth.currentUser?.uid
+                                                    ? "bg-clr_1 text-black"
+                                                    : "bg-black bg-opacity-80 text-clr_1"
+                                            }`}
+                                        >
+                                            {message.message}
+                                            <div className='text-xs text-white mt-1'>
+                                                {message.timestamp ? formatDistanceToNow(new Date(message.timestamp.seconds * 1000), { addSuffix: true }) : "No timestamp"}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
-                            {/* Scroll to the bottom */}
-                            <div ref={messagesEndRef} />
+                                ))}
+                                {/* Scroll to the bottom */}
+                                <div ref={messagesEndRef} />
+                            </div>
                         </div>
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                handleSendMessage();
+                            }}
+                            className='flex w-full items-center self-end h-[15%] bg-black'
+                        >
+                            <input
+                                className="w-[90%] h-full bg-black bg-opacity-80 text-clr_1 p-2 rounded-l-lg"
+                                placeholder='Type your message here'
+                                type="text"
+                                value={newMessage}
+                                onChange={(e) => setNewMessage(e.target.value)}
+                            />
+                            <div className='absolute right-0 '>
+                                <button
+                                    type="submit"
+                                    className=' text-clr_1 p-2 rounded-r-lg flex items-center justify-center'
+                                >
+                                    <FaRegPaperPlane className="text-xl" />
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <form
-                        onSubmit={(e) => {
-                            e.preventDefault();
-                            handleSendMessage();
-                        }}
-                        className='flex w-full items-center self-end h-[15%] bg-black'
-                    >
-                        <input
-                            className="w-[90%] h-full bg-black bg-opacity-80 text-clr_1 p-2 rounded-l-lg"
-                            placeholder='Type your message here'
-                            type="text"
-                            value={newMessage}
-                            onChange={(e) => setNewMessage(e.target.value)}
-                        />
-                        <div className='absolute right-0 '>
-                            <button
-                                type="submit"
-                                className=' text-clr_1 p-2 rounded-r-lg flex items-center justify-center'
-                            >
-                                <FaRegPaperPlane className="text-xl" />
-                            </button>
-                        </div>
-                    </form>
-                </div>
                     </>
                 )}
             </div>
