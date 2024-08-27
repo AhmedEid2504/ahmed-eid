@@ -18,7 +18,9 @@ const ChatButton = ({
                 onClick={handleChat}
                 className='rounded-full border-2 border-clr_1 text-white p-1'
             >
-                <Image className='rounded-full' src='/images/me.jpg' alt='Chat' width={40} height={30} />
+                <div className=' h-[40px] flex overflow-hidden rounded-full justify-center items-center'>
+                    <Image className='rounded-full' src='/images/me.jpg' alt='Chat' width={40} height={30} />
+                </div>
             </button>
         </div>
     )

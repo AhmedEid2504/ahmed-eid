@@ -16,8 +16,8 @@ const Chat = ({
 
 
     return (
-        <div className="fixed flex flex-col z-40 bottom-0 sm-right-0 border-2 border-clr_1 rounded-lg">
-            <div className="flex flex-col w-[30vw] max-sm:w-[95vw] h-[60dvh] rounded-md bg-gray-800 bg-opacity-90 p-4  ">
+        <div className="fixed flex flex-col z-40 bottom-0 sm:right-2 border-2 border-clr_1 rounded-b-none rounded-lg">
+            <div className="flex flex-col w-[30vw] max-sm:w-[95vw] h-[60dvh] rounded-md rounded-b-none bg-gray-800 bg-opacity-90 p-4  ">
                 <button 
                     onClick={handleChat}
                     className="p-1 self-end"
@@ -31,7 +31,7 @@ const Chat = ({
             </div>
             <div className=' flex w-full border-t-2 border-clr_1  justify-center items-center'>
                 <input 
-                    className=" w-full h-[50px] bg-transparent text-clr_1 p-2   "
+                    className=" w-full h-[50px] bg-black bg-opacity-80 text-clr_1 p-2   "
                     placeholder='Type your message here'
                     type="text" 
                     
