@@ -19,7 +19,11 @@ const ProjectCard = ({
   return (
     <div className='flex flex-col justify-center items-center p-5 max-sm:p-2 rounded-lg shadow-sm shadow-clr_1 bg-clr_1 bg-opacity-15 w-[70vw]'>
         {/* images slider */}
-        <Slider images={images} />
+        <Slider 
+          images={images} 
+          description={description}
+
+        />
         {/* description */}
         <div className='flex flex-col justify-center items-center gap-2 pt-2'>
             <h1 className='text-xl max-sm:text-lg'>{name}</h1>

@@ -5,12 +5,8 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import  MagicButton from './ui/MagicButton'
 import {  FaArrowDown } from 'react-icons/fa';
 import GridBG from './ui/GridBG';
-import Loader from './ui/Loader';
-import { useState } from 'react';
 
 const Hero = () => {
-    
-        
 
     return (
         <div className='relative h-full min-h-[100dvh] w-screen'>
@@ -66,7 +62,7 @@ const Hero = () => {
                     />
                 </div>
                 <div className='mt-8'>
-                    <a href="#3">
+                    <a href="#4">
                         <MagicButton 
                             content='Show Projects'
                             icon={<FaArrowDown />}

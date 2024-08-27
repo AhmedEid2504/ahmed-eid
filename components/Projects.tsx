@@ -13,7 +13,7 @@ const projects = [
       { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image' },
     ],
     tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
-    description: 'Project 1 Description',
+    description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
     demoLink: 'https://ahmed-eid-ashen.vercel.app/',
     codeLink:''
   },
@@ -27,12 +27,9 @@ const projects = [
       { src: '/images/projects/project-1/project1-4.png', alt: 'Project 1 Image' },
       { src: '/images/projects/project-1/project1-5.png', alt: 'Project 1 Image' },
       { src: '/images/projects/project-1/project1-6.png', alt: 'Project 1 Image' },
-
-
-      
     ],
     tags: ['HTML', 'CSS', 'JavaScript'],
-    description: 'Project 1 Description',
+    description: 'E-commerce Fashion Store built with HTML, CSS and JavaScript showcasing different products and their details, with a cart functionality.',
     demoLink: 'https://high-five-swart.vercel.app/',
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
@@ -44,7 +41,7 @@ const projects = [
       { src: '/images/projects/project-2/Meme-Maker-2.png', alt: 'Project 2 Image' },
     ],
     tags: ['React', 'JavaScript', 'TailwindCSS', 'Firebase'],
-    description: 'Project 1 Description',
+    description: 'Meme Maker Application built with React, JavaScript, TailwindCSS and Firebase for creating memes with different templates and downloading them, with a login functionality and sharing memes on the wall of memes with other users.',
     demoLink: 'https://meme-maker-nu.vercel.app/',
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
@@ -55,7 +52,7 @@ const projects = [
       { src: '/images/projects/project-3/project3-1.png', alt: 'Project 3 Image' },
     ],
     tags: ['React', 'JavaScript'],
-    description: 'Project 1 Description',
+    description: 'Airbnb Clone built with React and JavaScript showcasing different places and their details.',
     demoLink: 'https://react-scrimba-airbnb.vercel.app/',
     codeLink:'https://react-scrimba-airbnb.vercel.app/'
   },
@@ -68,7 +65,7 @@ const projects = [
       { src: '/images/projects/project-4/project4-3.png', alt: 'Project 4 Image' },
     ],
     tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-    description: 'Project 1 Description',
+    description: 'Landing Page for a Food Delivery Service built with HTML, CSS, JavaScript and Bootstrap.',
     demoLink: 'https://ubi-order.vercel.app/',
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
@@ -81,7 +78,7 @@ const projects = [
       { src: '/images/projects/project-5/project5-3.png', alt: 'Project 5 Image 3' },
     ],
     tags: ['HTML', 'CSS', 'JavaScript'],
-    description: 'Project 1 Description',
+    description: 'E-commerce Furniture Store built with HTML, CSS and JavaScript showcasing different products and their details, with a cart functionality.',
     demoLink: 'https://comfy-house-two.vercel.app/',
     codeLink:'',
   },
@@ -105,7 +102,7 @@ const projects = [
       { src: '/images/projects/project-7/project7-1.png', alt: 'Project 7 Image' },
     ],
     tags: ['React', 'JavaScript', 'Movies Search API'],
-    description: 'Project 1 Description',
+    description: 'Cinema Maze Application built with React and JavaScript for searching movies.',
     demoLink: 'https://cinema-maze.vercel.app/',
     codeLink:''
   },
@@ -116,7 +113,7 @@ const projects = [
       { src: '/images/projects/project-8/project8-1.png', alt: 'Project 8 Image' },
     ],
     tags: ['HTML', 'CSS', 'JavaScript'],
-    description: 'Project 1 Description',
+    description: 'Functional Chat Application built with HTML, CSS and JavaScript for chatting with other users.',
     demoLink: 'https://community-chat-sand.vercel.app/',
     codeLink:''
   },

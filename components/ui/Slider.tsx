@@ -5,9 +5,10 @@ import ImageModal from './ImageModal';
 
 type SliderProps = {
     images: { src: string; alt: string }[];
+    description?: string;
 };
 
-const Slider = ({ images }: SliderProps) => {
+const Slider = ({ images, description }: SliderProps) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [fade, setFade] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -87,6 +88,7 @@ const Slider = ({ images }: SliderProps) => {
                     imageSrc={images[currentIndex].src}
                     imageAlt={images[currentIndex].alt}
                     onClose={() => setIsModalOpen(false)}
+                    description={description}
                 />
             )}
         </div>

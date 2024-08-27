@@ -1,7 +1,5 @@
-import { useEffect, useRef } from 'react';
 
 import React from 'react';
-import Image from 'next/image';
 import Scroller from './ui/Scroller';
 import GridBG from './ui/GridBG';
 
