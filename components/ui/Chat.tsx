@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { FaX } from 'react-icons/fa6';
 import { FaEnvelope, FaFacebookSquare, FaLinkedin, FaLinkedinIn, FaRegPaperPlane, FaTelegram, FaTelegramPlane, FaWhatsapp, FaWhatsappSquare } from 'react-icons/fa';
 import { GoogleAuthProvider } from 'firebase/auth';
@@ -7,7 +7,8 @@ import { signInWithPopup } from 'firebase/auth';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Image from 'next/image';
 import { db, auth } from '@/firebase';
-import { doc, getDoc, setDoc, collection, addDoc, serverTimestamp, query, orderBy, onSnapshot } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, addDoc, serverTimestamp, onSnapshot } from 'firebase/firestore';
+import { formatDistanceToNow } from 'date-fns';
 
 type ChatProps = {
     isChatOpen: boolean;
@@ -19,6 +20,7 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
     const [newMessage, setNewMessage] = useState("");
     const router = useRouter();
     const [user] = useAuthState(auth);
+    const messagesEndRef = useRef<HTMLDivElement>(null); // Ref for auto-scrolling
 
     const handleGoogleSignIn = async () => {
         try {
@@ -45,11 +47,22 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
             snapshot.forEach((doc) => {
                 messagesArray.push({ id: doc.id, ...doc.data() });
             });
+
+            // Manually sort messages by timestamp
+            messagesArray.sort((a, b) => (a.timestamp?.seconds || 0) - (b.timestamp?.seconds || 0));
+
             setMessages(messagesArray);
         });
 
         return () => unsubscribe();
     }, [user]);
+
+    useEffect(() => {
+        // Auto-scroll to the latest message
+        if (messagesEndRef.current) {
+            messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [messages]);
 
     const startNewChat = async () => {
         try {
@@ -89,7 +102,7 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
                 message: message,
                 timestamp: serverTimestamp(),
                 from: user.uid,
-                userProfilePic: user.photoURL,
+                userProfilePic: user.photoURL || '/images/default-profile.jpg',
                 username: user.displayName || 'Anonymous',
             });
 
@@ -109,7 +122,7 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
     return (
         <div className="fixed flex flex-col z-40 bottom-0 sm:right-2 border-2 border-clr_1 rounded-b-none rounded-lg">
             <div className="flex flex-col w-[40vw] max-sm:w-[95vw] h-[60dvh] rounded-md rounded-b-none bg-gray-800 bg-opacity-90">
-                <button onClick={handleChat} className="p-2 self-end">
+                <button onClick={handleChat} className="p-2 self-end h-[10%]">
                     <FaX className="text-xl text-clr_1" />
                 </button>
                 {!user ?
@@ -130,15 +143,9 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
                         </div>
                     </div>
                     :
-                    <div className='flex flex-col h-full'>
-                        <div className='h-[90%] text-clr_1 px-4 py-2 flex flex-col items-center'>
-                            <div className='rounded-full h-[60px] w-[60px] overflow-hidden border-2 border-clr_1 text-white p-1'>
-                                <div className='flex rounded-full'>
-                                    <Image className='rounded-full' src='/images/me.jpg' alt='Chat' width={50} height={50} />
-                                </div>
-                            </div>
-                            <h1 className='text-2xl'>Ahmed Eid</h1>
-                            <div className='flex flex-col gap-2 h-[75%] w-full p-2 bg-black-100'>
+                    <div className='flex flex-col h-[90%]'>
+                        <div className=' text-clr_1 h-[85%] px-4 py-2 flex flex-col overflow-y-auto'>
+                            <div className='flex flex-col gap-2'>
                                 {messages.map((message) => (
                                     <div
                                         key={message.id}
@@ -158,25 +165,39 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
                                             }`}
                                         >
                                             {message.message}
+                                            <div className='text-xs text-white mt-1'>
+                                                {message.timestamp ? formatDistanceToNow(new Date(message.timestamp.seconds * 1000), { addSuffix: true }) : "No timestamp"}
+                                            </div>
                                         </div>
                                     </div>
                                 ))}
+                                {/* Scroll to the bottom */}
+                                <div ref={messagesEndRef} />
                             </div>
                         </div>
-                        <div className='flex w-full border-t-2 border-clr_1 justify-center items-center'>
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault();
+                                handleSendMessage();
+                            }}
+                            className='flex w-full items-center self-end h-[15%] bg-black'
+                        >
                             <input
-                                className="w-full h-[50px] bg-black bg-opacity-80 text-clr_1 p-2"
+                                className="w-[90%] h-full bg-black bg-opacity-80 text-clr_1 p-2 rounded-l-lg"
                                 placeholder='Type your message here'
                                 type="text"
                                 value={newMessage}
                                 onChange={(e) => setNewMessage(e.target.value)}
                             />
-                            <div className='absolute right-4'>
-                                <button onClick={handleSendMessage}>
-                                    <FaRegPaperPlane className="text-xl text-clr_1" />
+                            <div className='absolute right-0 '>
+                                <button
+                                    type="submit"
+                                    className=' text-clr_1 p-2 rounded-r-lg flex items-center justify-center'
+                                >
+                                    <FaRegPaperPlane className="text-xl" />
                                 </button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 }
             </div>
