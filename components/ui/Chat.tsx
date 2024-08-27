@@ -80,6 +80,8 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
                     message: "Welcome to the chat!",
                     timestamp: serverTimestamp(),
                     from: "system",
+                    userProfilePic: '/images/me.jpg',
+                    username: 'Ahmed Eid',
                 });
 
                 console.log("New chat started for user:", user.uid);
