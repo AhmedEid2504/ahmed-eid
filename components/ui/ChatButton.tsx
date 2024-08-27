@@ -13,7 +13,7 @@ const ChatButton = ({
 }: ChatButtonProps) => {
     return (
         <div className='z-50 fixed bottom-5 right-8'>
-            <FaRegCommentDots className='text-2xl fixed right-2 text-clr_1' />
+            <FaRegCommentDots className=' absolute text-2xl -right-6 -top-2 text-clr_1' />
             <button
                 onClick={handleChat}
                 className='rounded-full border-2 border-clr_1 text-white p-1'

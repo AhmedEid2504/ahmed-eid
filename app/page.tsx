@@ -8,14 +8,25 @@ import ChatButton from "@/components/ui/ChatButton";
 import ElevatorNav from "@/components/ui/ElevatorNav";
 import { useState } from "react";
 import { FaX } from "react-icons/fa6";
+import useIsAdmin from "@/hooks/useIsAdmin";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "@/firebase";
+import AdminChat from "@/components/ui/AdminChat";
+
 
 export default function Home() {
 
   const [isChatOpen, setIsChatOpen] = useState(false);
 
+  const [user] = useAuthState(auth);
+  const isAdmin = useIsAdmin(user?.uid);
+
   const handleChat = () => {
     setIsChatOpen(!isChatOpen);
+    console.log(isAdmin)
   }
+
+  
 
   return (
     <>
@@ -35,16 +46,34 @@ export default function Home() {
             <Projects />
           </section>
         </div>
-        { !isChatOpen ?
-            <ChatButton 
-              isChatOpen={isChatOpen} 
-              handleChat={handleChat}
-            />
-            :
-            <Chat
-              isChatOpen={isChatOpen}
-              handleChat={handleChat}
-            />
+        { isAdmin ?
+          <>
+            { !isChatOpen ?
+              <ChatButton 
+                isChatOpen={isChatOpen} 
+                handleChat={handleChat}
+              />
+              :
+              <AdminChat
+                isChatOpen={isChatOpen}
+                handleChat={handleChat}
+              />
+            }
+          </>
+        :
+          <>
+            { !isChatOpen ?
+              <ChatButton 
+                isChatOpen={isChatOpen} 
+                handleChat={handleChat}
+              />
+              :
+              <Chat
+                isChatOpen={isChatOpen}
+                handleChat={handleChat}
+              />
+            }
+          </>
         }
       </main>
     </>
