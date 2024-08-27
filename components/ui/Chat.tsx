@@ -1,13 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { FaX } from 'react-icons/fa6'
 import { FaEnvelope, FaFacebookSquare, FaLinkedin, FaLinkedinIn, FaRegPaperPlane, FaTelegram, FaTelegramPlane, FaWhatsapp, FaWhatsappSquare } from 'react-icons/fa'
 import { GoogleAuthProvider } from 'firebase/auth'
-import { auth } from '@/firebase'
 import { useRouter } from "next/navigation";
 import { signInWithPopup } from "firebase/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Image from 'next/image'
+import { db, auth } from '@/firebase';
+import { doc, getDoc, setDoc, collection, addDoc, serverTimestamp, query, orderBy, onSnapshot } from "firebase/firestore";
 
 type ChatProps = {
     isChatOpen: boolean;
@@ -17,25 +18,105 @@ type ChatProps = {
 const Chat = ({
     isChatOpen, handleChat
 }: ChatProps) => {
+    const [messages, setMessages] = useState<{ id: string; [key: string]: any }[]>([]);
+    const [newMessage, setNewMessage] = useState("");
     const router = useRouter();
-
     const [user] = useAuthState(auth);
 
     const handleGoogleSignIn = async () => {
         try {
             const result = await signInWithPopup(auth, new GoogleAuthProvider());
-            // You can access user info here: result.user
             console.log("User signed in:", result.user);
-            router.push("/"); // Redirect to the home page or another page after sign-in
+            
+            await startNewChat();  // Start new chat if needed
+
+            router.push("/");  // Redirect to the home page or another page after sign-in
         } catch (error) {
             console.error("Error signing in with Google:", error);
-            // Handle Errors here.
         }
     };
     
     const signOut = async () => {
         auth.currentUser && await auth.signOut();
     }
+
+    useEffect(() => {
+        if (!user) return;
+
+        // Reference to the user's chat subcollection
+        const chatsRef = collection(db, "users", user.uid, "messages");
+
+        // Set up a real-time listener
+        const unsubscribe = onSnapshot(chatsRef, (snapshot) => {
+            const messagesArray: { id: string; [key: string]: any }[] = [];
+            snapshot.forEach((doc) => {
+                messagesArray.push({ id: doc.id, ...doc.data() });
+            });
+            setMessages(messagesArray);
+        });
+
+        // Cleanup the listener on unmount
+        return () => unsubscribe();
+    }, [user]);
+
+    const startNewChat = async () => {
+        try {
+            const user = auth.currentUser;
+            
+            if (!user) throw new Error("User not authenticated");
+        
+            // Check if the user already has a chat
+            const userDocRef = doc(db, "users", user.uid);
+            const userDoc = await getDoc(userDocRef);
+        
+            if (!userDoc.exists()) {
+            // Create user document and a new chat subcollection
+            await setDoc(userDocRef, { createdAt: serverTimestamp() });
+        
+            const chatsRef = collection(db, "users", user.uid, "messages");
+            await addDoc(chatsRef, {
+                message: "Welcome to the chat!",
+                timestamp: serverTimestamp(),
+                from: "system",
+            });
+        
+            console.log("New chat started for user:", user.uid);
+            } else {
+            console.log("Chat already exists for user:", user.uid);
+            }
+        } catch (error) {
+            console.error("Error starting new chat:", error);
+        }
+    };
+
+    const sendMessage = async (message: string) => {
+        try {
+        const user = auth.currentUser;
+    
+        if (!user) throw new Error("User not authenticated");
+    
+        // Reference to the user's chat subcollection
+        const chatsRef = collection(db, "users", user.uid, "messages");
+    
+        // Add a new message to the subcollection
+        await addDoc(chatsRef, {
+            message: message,
+            timestamp: serverTimestamp(),
+            from: user.uid,
+        });
+    
+        console.log("Message sent:", message);
+        } catch (error) {
+        console.error("Error sending message:", error);
+        }
+    };
+
+    const handleSendMessage = async () => {
+        if (newMessage.trim() === "") return;
+
+        await sendMessage(newMessage);
+        setNewMessage(""); // Clear the input after sending the message
+    };
 
     return (
         <div className="fixed flex flex-col z-40 bottom-0 sm:right-2 border-2 border-clr_1 rounded-b-none rounded-lg">
@@ -86,20 +167,38 @@ const Chat = ({
                                 </div>
                             </div>
                             <h1 className='text-2xl'>Ahmed Eid</h1>
-                            <div className='flex flex-col gap-2 h-[75%] p-2 bg-black-100'>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores minima ullam, accusamus pariatur molestiae est laborum et id sit esse vel iste magni, praesentium ipsam quia! Repellendus necessitatibus eos eius!</p>
+                            <div className='flex flex-col gap-2 h-[75%] w-full p-2 bg-black-100'>
+                                {messages.map((message) => (
+                                    <div key={message.id} className='flex flex-col gap-1'>
+                                        <div className='flex  gap-2 justify-between'>
+                                            <div className='flex justify-center items-center gap-2'>
+                                                <div className='rounded-full h-[40px] w-[40px] overflow-hidden border-2 border-clr_1 text-white p-1'>
+                                                    <div className=' flex rounded-full'>
+                                                        <Image className='rounded-full' src='/images/me.jpg' alt='Chat' width={30} height={20} />
+                                                    </div>
+                                                </div>
+                                                <div className='flex flex-col gap-1'>
+                                                    <h1 className='text-clr_1 text-sm'>Ahmed Eid</h1>
+                                                    <p className='text-clr_1 text-sm'>{message.message}</p>
+                                                </div>
+                                            </div>
+                                            <p className='text-clr_1 text-xs w-[20%]'>{new Date(message.timestamp?.toDate()).toLocaleString()}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                         <div className=' flex w-full border-t-2 border-clr_1  justify-center items-center'>
-                            <input 
-                                className=" w-full h-[50px] bg-black bg-opacity-80 text-clr_1 p-2   "
-                                placeholder='Type your message here'
-                                type="text" 
-                                
-                            />
-                            <div className=' absolute right-4'>
-                                <button>
-                                    <FaRegPaperPlane className="text-1xl text-clr_1" />
+                        <input
+                            className="w-full h-[50px] bg-black bg-opacity-80 text-clr_1 p-2"
+                            placeholder='Type your message here'
+                            type="text"
+                            value={newMessage}
+                            onChange={(e) => setNewMessage(e.target.value)}
+                        />
+                            <div className='absolute right-4'>
+                                <button onClick={handleSendMessage}>
+                                    <FaRegPaperPlane className="text-xl text-clr_1" />
                                 </button>
                             </div>
                         </div>
