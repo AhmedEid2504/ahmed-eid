@@ -46,17 +46,6 @@ const projects = [
     codeLink:'https://github.com/AhmedEid2504/High-Five'
   },
   {
-    name: 'Airbnb Clone',
-    title: '',
-    images: [
-      { src: '/images/projects/project-3/project3-1.png', alt: 'Project 3 Image' },
-    ],
-    tags: ['React', 'JavaScript'],
-    description: 'Airbnb Clone built with React and JavaScript showcasing different places and their details.',
-    demoLink: 'https://react-scrimba-airbnb.vercel.app/',
-    codeLink:'https://react-scrimba-airbnb.vercel.app/'
-  },
-  {
     name: 'UBI Order',
     title: '',
     images: [

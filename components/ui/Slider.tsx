@@ -50,7 +50,7 @@ const Slider = ({ images, description }: SliderProps) => {
                     {'<'}
                 </button>
                 <div
-                    className={`relative max-w-[300px] max-h-[200px] sm:max-w-[600px] sm:max-h-[400px] overflow-auto transition-opacity cursor-pointer duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
+                    className={`relative max-w-[300px] max-h-[200px] sm:max-w-[600px] sm:max-h-[350px] overflow-auto transition-opacity cursor-pointer duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
                     onMouseEnter={() => setFade(true)}
                     onMouseLeave={() => setFade(true)}
                 >
@@ -60,7 +60,7 @@ const Slider = ({ images, description }: SliderProps) => {
                             src={images[currentIndex].src}
                             alt={images[currentIndex].alt}
                             width={600}
-                            height={400}
+                            height={350}
                             onClick={() => setIsModalOpen(true)}
                         />
                     ) : (
