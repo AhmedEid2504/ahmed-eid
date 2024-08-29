@@ -90,16 +90,25 @@ const AdminChat = ({
         }
     };
 
+    const signOut = async () => {
+        auth.currentUser && await auth.signOut();
+        handleChat();
+    };
+
     if (!user || !isAdmin) {
         return <p>Access denied. You must be an admin to view this page.</p>;
     }
+    
 
     return (
-        <div className="fixed flex flex-col z-40 bottom-0 sm:right-2 border-2 border-clr_1 rounded-b-none rounded-lg">
+        <div className="fixed flex flex-col z-40 bottom-0 sm:right-2 border-2  border-clr_1 transition-colors duration-150 ease-in rounded-b-none rounded-lg">
             <div className="flex flex-col w-[40vw] max-sm:w-[95vw] h-[60dvh] rounded-md rounded-b-none bg-gray-800 bg-opacity-90">
                 {!selectedChat &&
                     <div className="p-4">
-                    <div className="self-end p-4 flex items-center justify-between">
+                    <div className="p-4 flex items-center justify-between">
+                        <button onClick={signOut} className="p-2 text-xl text-clr_1 border-2 border-transparent hover:border-clr_1 transition-colors duration-150 ease-in self-end h-[10%]">
+                            Sign Out
+                        </button>
                         <button onClick={() => handleChat()}>
                             <FaX className="text-xl text-clr_1" />
                         </button>

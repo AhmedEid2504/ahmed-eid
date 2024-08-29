@@ -35,6 +35,7 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
 
     const signOut = async () => {
         auth.currentUser && await auth.signOut();
+        handleChat();
     };
 
     useEffect(() => {
@@ -124,9 +125,14 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
     return (
         <div className="fixed flex flex-col z-40 bottom-0 sm:right-2 border-2 border-clr_1 rounded-b-none rounded-lg">
             <div className="flex flex-col w-[40vw] max-sm:w-[95vw] h-[60dvh] rounded-md rounded-b-none bg-gray-800 bg-opacity-90">
-                <button onClick={handleChat} className="p-2 self-end h-[10%]">
-                    <FaX className="text-xl text-clr_1" />
-                </button>
+                <div className='flex h-[10%] justify-between items-center text-center px-5 py-2 pt-4'>
+                    {user && 
+                        <button onClick={signOut} className="text-clr_1 p-2 border-2 border-transparent hover:border-clr_1 transition-colors duration-150 ease-in rounded-md">Sign Out</button>
+                    }
+                    <button onClick={handleChat} className="p-2 justify-end">
+                        <FaX className="text-xl text-clr_1" />
+                    </button>
+                </div>
                 {!user ?
                     <div className="flex flex-col justify-evenly items-center h-full gap-5">
                         <div className='flex flex-col'>
@@ -136,11 +142,21 @@ const Chat = ({ isChatOpen, handleChat }: ChatProps) => {
                         <div className="flex flex-col justify-center items-center space-x-4 gap-2">
                             <h1 className='text-2xl text-clr_1 text-center gap-5'>Or</h1>
                             <div className='flex justify-center items-center gap-2'>
-                                <button><FaEnvelope className="text-2xl text-clr_1" /></button>
-                                <button><FaWhatsappSquare className="text-2xl text-clr_1" /></button>
-                                <button><FaTelegramPlane className="text-2xl text-clr_1" /></button>
-                                <button><FaFacebookSquare className="text-2xl text-clr_1" /></button>
-                                <button><FaLinkedin className="text-2xl text-clr_1" /></button>
+                                <a href="mailto:ahmedeid2504@gmail.com">
+                                    <button><FaEnvelope className="text-2xl text-clr_1" /></button>
+                                </a>
+                                <a href="https://wa.me/+201016443553" target="_blank">
+                                    <button><FaWhatsappSquare className="text-2xl text-clr_1" /></button>
+                                </a>
+                                <a href="https://t.me/+201016443553">
+                                    <button><FaTelegramPlane className="text-2xl text-clr_1" /></button>
+                                </a>
+                                <a href="https://www.facebook.com/profile.php?id=100004444609352">
+                                    <button><FaFacebookSquare className="text-2xl text-clr_1" /></button>
+                                </a>
+                                <a href="https://www.linkedin.com/in/ahmed-eid2504">
+                                    <button><FaLinkedin className="text-2xl text-clr_1" /></button>
+                                </a>
                             </div>
                         </div>
                     </div>
