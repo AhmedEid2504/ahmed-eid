@@ -37,13 +37,13 @@ export default function Home() {
             <Hero />
           </section>
           <section id="2" className="w-full">
-            <ShowCase />
+            <Projects />
           </section>
           <section id="3" className="w-full">
-            <TechStack />
+            <ShowCase />
           </section>
           <section id="4" className="w-full">
-            <Projects />
+            <TechStack />
           </section>
         </div>
         { isAdmin ?

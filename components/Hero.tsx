@@ -62,7 +62,7 @@ const Hero = () => {
                     />
                 </div>
                 <div className='mt-8'>
-                    <a href="#4">
+                    <a href="#2">
                         <MagicButton 
                             content='Show Projects'
                             icon={<FaArrowDown />}

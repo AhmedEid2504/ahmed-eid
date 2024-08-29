@@ -148,7 +148,6 @@ const AdminChat = ({
                                         </div>
                                     </div>
                                 ))}
-                                {/* Scroll to the bottom */}
                                 <div ref={messagesEndRef} />
                             </div>
                         </div>
