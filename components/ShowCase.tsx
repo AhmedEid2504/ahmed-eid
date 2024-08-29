@@ -41,14 +41,14 @@ const ShowCase = () => {
                     </div>
                     {activeMode === 'desktop' && (
                         <div className='flex gap-5 justify-center items-center'>
-                            <div className='h-[95dvh] w-[90vw] max-sm:h-[85dvh] bg-black border-gray-800 border-8'>
+                            <div className='h-[95dvh] w-[90vw] max-sm:h-[85dvh] bg-black border-gray-800 border-8 rounded-md'>
                                 <iframe className='h-full w-full' src="https://high-five-swart.vercel.app/trends/trends.html"></iframe>
                             </div>
                         </div>
                     )}
                     {activeMode === 'tablet' && (
                         <div className='flex gap-5 justify-center items-center'>
-                            <div className='h-[60dvh] w-[70vw] bg-black border-gray-800 border-8'>
+                            <div className='h-[60dvh] w-[70vw] bg-black border-gray-800 border-8 rounded-md'>
                                 <iframe className='h-full w-full' src="https://high-five-swart.vercel.app/trends/trends.html"></iframe>
                             </div>
                         </div>
@@ -64,12 +64,12 @@ const ShowCase = () => {
                 </div>
                 <div className=' max-lg:hidden flex justify-center items-center gap-3'>
                     <div className='gap-5 justify-center items-center'>
-                        <div className='h-[95dvh] w-[65vw]  max-sm:h-[85dvh] bg-black border-gray-800 border-8'>
+                        <div className='h-[95dvh] w-[65vw]  max-sm:h-[85dvh] bg-black border-gray-800 border-8 rounded-md'>
                             <iframe className='h-full w-full' src="https://high-five-swart.vercel.app/trends/trends.html"></iframe>
                         </div>
                     </div>
                     <div>
-                        <div className='h-[70dvh] w-[360px] bg-black border-gray-800 border-8'>
+                        <div className='h-[70dvh] w-[360px] bg-black border-gray-800 border-8 rounded-md'>
                             <iframe className='h-full w-full' src="https://high-five-swart.vercel.app/trends/trends.html"></iframe>
                         </div>
                     </div>
