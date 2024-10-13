@@ -4,6 +4,7 @@ import { projectsdetails } from '../../data/projectsdetails'
 import GridBG from '@/components/ui/GridBG';
 import SliderImageBtns from '@/components/ui/SliderImageBtns';
 import Image from 'next/image';
+import Link from 'next/link';
 interface ProjectDetailsProps {
     params: {
         id: string;
@@ -16,6 +17,13 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
     return (
         <div>
             <GridBG />
+            <button 
+                className='fixed top-5 left-5 bg-clr_1 bg-opacity-50 p-2 rounded-md text-white'
+            >
+                <Link href='/'>
+                    Back
+                </Link>
+            </button>
             <div className='text-white flex flex-col justify-center items-center py-20 px-10 w-screen'>
                 {projectsdetails.map((project) => {
                     if (project.id === id) {
@@ -41,7 +49,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                 {/* sections */}
                                 <div className='flex flex-col w-screen p-10 gap-6'>
                                     {project.sections?.map((section, index) => (
-                                        <>
+                                        <div key={index}>
                                             {index % 2 === 0 ? (
                                                 <div key={index} className='flex flex-wrap basis-2 items-center justify-center gap-4 w-full self-start bg-black bg-opacity-30 rounded-md p-4'>
                                                     <div className='flex-1 self-center'>
@@ -88,7 +96,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                                     </div>
                                                 </div>
                                             )}
-                                        </>
+                                        </div>
                                     ))}
 
                                 </div>
