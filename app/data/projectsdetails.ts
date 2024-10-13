@@ -1,4 +1,20 @@
-const projectsdetails = [
+type ProjectDetails = {
+    id: string
+    name: string
+    title: string
+    images: { src: string; alt: string; description?: string }[]
+    tags: string[]
+    description: string
+    demoLink?: string
+    codeLink?: string
+    sections?: {
+        title: string
+        content: string
+        image?: { src: string; alt: string }
+    }[]
+}
+
+const projectsdetails: ProjectDetails[] = [
     {
         id: '1',
         name: 'Portfolio',
@@ -15,15 +31,18 @@ const projectsdetails = [
         sections: [
             {
                 title: 'Overview of the Portfolio Website',
-                content: 'This portfolio website serves as a comprehensive representation of my work, skills, and professional journey. It provides potential employers and collaborators with easy access to my most notable projects and achievements. Built using Next.js, TypeScript, and TailwindCSS, this site combines a modern tech stack with an intuitive and visually appealing interface, making it an ideal platform for showcasing my development capabilities.'
+                content: 'This portfolio website serves as a comprehensive representation of my work, skills, and professional journey. It provides potential employers and collaborators with easy access to my most notable projects and achievements. Built using Next.js, TypeScript, and TailwindCSS, this site combines a modern tech stack with an intuitive and visually appealing interface, making it an ideal platform for showcasing my development capabilities.',
+                image: { src: '/images/projects/project-9/project9-1.png', alt: 'Project 9 Image' }
             },
             {
                 title: 'Advanced Tech Stack for Performance and Scalability',
-                content: 'The use of Next.js ensures that the website is highly performant with built-in optimizations like server-side rendering (SSR) and static site generation (SSG). TypeScript provides strong typing, ensuring fewer runtime errors and more robust code. Finally, TailwindCSS helps maintain a clean and organized design, enabling rapid development of responsive and modern user interfaces.'
+                content: 'The use of Next.js ensures that the website is highly performant with built-in optimizations like server-side rendering (SSR) and static site generation (SSG). TypeScript provides strong typing, ensuring fewer runtime errors and more robust code. Finally, TailwindCSS helps maintain a clean and organized design, enabling rapid development of responsive and modern user interfaces.',
+                image: { src: '/images/projects/project-9/project9-2.png', alt: 'Project 9 Image' }
             },
             {
                 title: 'Highlighting My Best Work',
-                content: 'One of the most important sections of this portfolio is the Projects Section, where each project is displayed with attention to detail, including images, descriptions, and live demos. This section emphasizes my diverse experience, showcasing projects built using various technologies and frameworks. Each project card is interactive, providing users with more information and links to code repositories and demos.'
+                content: 'One of the most important sections of this portfolio is the Projects Section, where each project is displayed with attention to detail, including images, descriptions, and live demos. This section emphasizes my diverse experience, showcasing projects built using various technologies and frameworks. Each project card is interactive, providing users with more information and links to code repositories and demos.',
+                image: { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image' }
             },
             {
                 title: 'User Experience and Responsiveness',
