@@ -47,6 +47,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                                     <div className='flex-1 self-center'>
                                                         {section.image && 
                                                             <Image
+                                                                key={index}
                                                                 src={section.image.src}
                                                                 alt={section.image.alt}
                                                                 width={800}
@@ -76,6 +77,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                                     <div className='flex-1 self-center'>
                                                         {section.image && 
                                                             <Image
+                                                                key={index}
                                                                 src={section.image.src}
                                                                 alt={section.image.alt}
                                                                 width={800}
