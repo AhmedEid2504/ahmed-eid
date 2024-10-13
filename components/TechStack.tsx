@@ -1,57 +1,117 @@
+import React, { useEffect, useRef, useState } from 'react';
 
-import React from 'react';
-import Scroller from './ui/Scroller';
-import GridBG from './ui/GridBG';
+// Define the structure for milestones
+interface Milestone {
+  label: string;
+  progress: number;
+  branches: string[];
+}
 
-const frontEndStack = [
-  { src: '/images/html.png', alt: 'html' },
-  { src: '/images/css.png', alt: 'css' },
-  { src: '/images/js.png', alt: 'js' },
-  { src: '/images/ts.png', alt: 'typescript' },
-  { src: '/images/react.png', alt: 'react' },
-  { src: '/images/nextjs.png', alt: 'nextjs' },
-  { src: '/images/tailwindcss.png', alt: 'tailwindcss' },
-  { src: '/images/bootstrap.png', alt: 'bootstrap' },
+const milestones: Milestone[] = [
+  { label: 'HTML', progress: 0, branches: [] },
+  { label: 'CSS', progress: 25, branches: ['Bootstrap', 'Tailwind'] },
+  { label: 'JavaScript', progress: 50, branches: ['TypeScript'] },
+  { label: 'React', progress: 100, branches: ['Next.js'] },
 ];
 
-const backEndStack = [
-  { src: '/images/django.png', alt: 'django' },
-  { src: '/images/python.png', alt: 'python' },
-  { src: '/images/mongodb.png', alt: 'mongodb' },
-  { src: '/images/postgresql.png', alt: 'postgresql' },
-  { src: '/images/firebase.png', alt: 'firebase' },
-];
+const Roadmap: React.FC = () => {
+  const roadmapRef = useRef<HTMLDivElement | null>(null);
+  const [visibleIndex, setVisibleIndex] = useState(-1); // Initially hidden
+  const [branchVisibleIndexes, setBranchVisibleIndexes] = useState<number[]>([]); // Branch visibility
 
-const toolsStack = [
-  { src: '/images/git.png', alt: 'git' },
-  { src: '/images/github.png', alt: 'github' },
-  { src: '/images/vscode.png', alt: 'vscode' },
-  { src: '/images/figma.png', alt: 'figma' },
-];
+  // Observer to trigger the reveal function when the roadmap is in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          revealAllMilestones();
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
 
+    if (roadmapRef.current) {
+      observer.observe(roadmapRef.current);
+    }
 
+    return () => observer.disconnect();
+  }, []);
 
-const TechStack = () => {
-    
+  // Reveal all milestones and branches in sequence 
+  const revealAllMilestones = () => {
+    const revealNextMilestone = (index: number) => {
+      if (index < milestones.length) {
+        setVisibleIndex(index); // Reveal the current milestone
+
+        // Set a timeout to reveal branches after the parent node
+        const branches = milestones[index].branches;
+
+        // Reveal each branch with a delay
+        branches.forEach((_, branchIndex) => {
+          setTimeout(() => {
+            setBranchVisibleIndexes((prev) => [...prev, index * 10 + branchIndex]); // Unique identifier for each branch
+          }, 300 * (branchIndex + 1)); // Delay for each branch (300ms per branch)
+        });
+
+        // Set a timeout to reveal the next milestone
+        setTimeout(() => {
+          revealNextMilestone(index + 1); // Call the next milestone
+        }, 1000 + branches.length * 300); // Adjust delay as needed
+      }
+    };
+
+    revealNextMilestone(0); // Start revealing from the first milestone
+  };
+
   return (
-    <div className='relative h-full min-h-[100dvh] w-screen'>
-      <GridBG />
-      <div className='z-50 h-full w-screen text-white pt-3 sm:pt-20 p-5 pr-[20px]'>
-        <div className='flex flex-col justify-center items-center '>
-          
-          <div className='text-2xl md:text-3xl lg:text-4xl text-start'>
-            <h1>Tech Stack</h1>
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-2xl text-white font-bold mb-5">Front End</h1>
+      {/* Roadmap */}
+      <div ref={roadmapRef} className="flex flex-col justify-center items-center relative w-full max-w-xl">
+        {/* Connecting Lines */}
+        {milestones.map((milestone, index) => (
+          <div key={index} className="flex flex-col items-center justify-center relative">
+            {index > 0 && (
+              <div
+                className={`w-1 h-16 bg-clr_1 transition-opacity duration-500 ${visibleIndex >= index ? 'opacity-100' : 'opacity-0'}`}
+              />
+            )}
+            {/* Milestone Node */}
+            <div
+              className={`flex flex-col items-center transition-transform duration-500 ${visibleIndex >= index ? 'scale-100' : 'scale-0'}`}
+            >
+              <div className="h-4 w-4 bg-clr_1 rounded-full" />
+              <span className="absolute -translate-x-16 text-sm text-white">{milestone.label}</span>
+            </div>
+            {/* Branches */}
+            {visibleIndex >= index && milestone.branches.length > 0 && (
+              <div className="absolute left-4 top-16 flex items-center">
+                {milestone.branches.map((branch, branchIndex) => (
+                  <div key={branchIndex} className="flex items-center mb-2">
+                    {/* Connecting line for each branch */}
+                    <div
+                      className={`w-20 h-1 bg-clr_1 transition-opacity duration-500 ease-linear ${
+                        visibleIndex >= index && branchVisibleIndexes.includes(index * 10 + branchIndex) ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    />
+                    <div
+                      className={`flex flex-col items-center transition-transform duration-500 ease-linear ${
+                        visibleIndex >= index && branchVisibleIndexes.includes(index * 10 + branchIndex) ? 'scale-100' : 'scale-0'
+                      }`}
+                    >
+                      <div className="h-4 w-4 bg-clr_1 rounded-full" />
+                      <span className="text-sm absolute translate-y-6 text-white">{branch}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
-
-          <div className='flex flex-col gap-5 max-sm:gap-2 max-sm:p-1 p-5 justify-center items-center'>
-            <Scroller type='image' title='Frontend' speed='slow' direction='left' stack={frontEndStack} />
-            <Scroller type='image' title='Backend' speed='slow' direction='right' stack={backEndStack} />
-            <Scroller type='image' title='Tools' speed='slow' direction='left' stack={toolsStack} />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default TechStack;
+export default Roadmap;
