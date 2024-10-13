@@ -40,9 +40,6 @@ export default function Home() {
             <Projects />
           </section>
           <section id="3" className="w-full">
-            <ShowCase />
-          </section>
-          <section id="4" className="w-full">
             <TechStack />
           </section>
         </div>

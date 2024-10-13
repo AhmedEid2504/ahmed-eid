@@ -61,15 +61,10 @@ const ElevatorNav = () => {
           className="relative w-3 bg-white rounded-full h-3"
         >
         </button>
-        <button
-          onClick={() => handleScroll('4', 3)}
-          className="relative w-3 bg-white rounded-full h-3"
-        >
-        </button>
         <div
           className="absolute -translate-y-5"
           style={{
-            top: `${activeIndex * 33}%`,
+            top: `${activeIndex * 45}%`,
             transform: 'translateY(-50%)',
             transition: 'top 0.8s ease',
           }}

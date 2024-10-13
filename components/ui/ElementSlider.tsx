@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 type ElementSliderProps = {
     projects: {
+        id: string
         name: string
         title: string
         images: { src: string; alt: string }[]

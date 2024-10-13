@@ -1,9 +1,11 @@
 import React from 'react'
 import Slider from './Slider'
 import MagicButton from './MagicButton'
+import Link from 'next/link'
 
 
 type ProjectCardProps = {
+  id: string
   name: string
   title?: string
   images: { src: string; alt: string }[]
@@ -14,7 +16,7 @@ type ProjectCardProps = {
 }
 
 const ProjectCard = ({
-  name, title, images, tags, description, demoLink, codeLink
+  id, name, title, images, tags, description, demoLink, codeLink
 }:ProjectCardProps) => {
   return (
     <div className='flex flex-col justify-center items-center p-5 max-sm:p-2 rounded-lg shadow-sm shadow-clr_1 bg-clr_1 bg-opacity-15 w-[70vw]'>
@@ -41,6 +43,12 @@ const ProjectCard = ({
                       otherClasses='w-36 max-sm:w-24 max-sm:text-xs max-sm:px-0.5'
                   />
                 </a>
+                <Link href={`/projects/${id}`}>
+                    <MagicButton
+                        content='Details'
+                        otherClasses='w-36 max-sm:w-24 max-sm:text-xs max-sm:px-0.5'
+                    />
+                </Link>
             </div>
         </div>
     </div>
