@@ -4,9 +4,9 @@ const projectsdetails = [
         name: 'Portfolio',
         title: '',
         images: [
-        { src: '/images/projects/project-9/project9-1.png', alt: 'Project 9 Image' },
-        { src: '/images/projects/project-9/project9-2.png', alt: 'Project 9 Image' },
-        { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image' },
+        { src: '/images/projects/project-9/project9-1.png', alt: 'Project 9 Image', description: 'Hero Section' },
+        { src: '/images/projects/project-9/project9-2.png', alt: 'Project 9 Image', description: 'Projects Section' },
+        { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image', description: 'Skills Section' },
         ],
         tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
         description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
