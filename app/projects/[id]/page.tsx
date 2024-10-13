@@ -37,7 +37,33 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                         </button>
                                     ))}
                                 </div>
-                                <p>{project.description}</p>
+                                {/* sections */}
+                                <div className='flex flex-col w-screen p-10 gap-4'>
+                                    {project.sections?.map((section, index) => (
+                                        <>
+                                            {index % 2 === 0 ? (
+                                                <div key={index} className='flex flex-col justify-center gap-2 w-[50vw] self-start bg-black bg-opacity-30 rounded-md p-4'>
+                                                    <h2
+                                                        className='text-3xl text-center bg-clr_1 bg-opacity-20 p-2 rounded-md w-fit'
+                                                    >{section.title}</h2>
+                                                    <h3
+                                                        className='text-2xl text-white  rounded-md  p-2'
+                                                    >{section.content}</h3>
+                                                </div>
+                                            ) : (
+                                                <div key={index} className='flex flex-col gap-2 w-[50vw] self-end'>
+                                                    <h2
+                                                        className='text-3xl text-center bg-clr_1 bg-opacity-20 p-2 rounded-md w-fit'
+                                                    >{section.title}</h2>
+                                                    <h3
+                                                        className='text-2xl text-white rounded-md bg-black bg-opacity-30 p-2'
+                                                    >{section.content}</h3>
+                                                </div>
+                                            )}
+                                        </>
+                                    ))}
+
+                                </div>
                             </div>
                         );
                     }

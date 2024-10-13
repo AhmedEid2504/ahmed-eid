@@ -11,7 +11,25 @@ const projectsdetails = [
         tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
         description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
         demoLink: 'https://ahmed-eid-ashen.vercel.app/',
-        codeLink:''
+        codeLink:'',
+        sections: [
+            {
+                title: 'Overview of the Portfolio Website',
+                content: 'This portfolio website serves as a comprehensive representation of my work, skills, and professional journey. It provides potential employers and collaborators with easy access to my most notable projects and achievements. Built using Next.js, TypeScript, and TailwindCSS, this site combines a modern tech stack with an intuitive and visually appealing interface, making it an ideal platform for showcasing my development capabilities.'
+            },
+            {
+                title: 'Advanced Tech Stack for Performance and Scalability',
+                content: 'The use of Next.js ensures that the website is highly performant with built-in optimizations like server-side rendering (SSR) and static site generation (SSG). TypeScript provides strong typing, ensuring fewer runtime errors and more robust code. Finally, TailwindCSS helps maintain a clean and organized design, enabling rapid development of responsive and modern user interfaces.'
+            },
+            {
+                title: 'Highlighting My Best Work',
+                content: 'One of the most important sections of this portfolio is the Projects Section, where each project is displayed with attention to detail, including images, descriptions, and live demos. This section emphasizes my diverse experience, showcasing projects built using various technologies and frameworks. Each project card is interactive, providing users with more information and links to code repositories and demos.'
+            },
+            {
+                title: 'User Experience and Responsiveness',
+                content: 'The website is designed to be fully responsive, ensuring that it looks and works great on devices of all sizes, from desktops to smartphones. This attention to responsiveness makes it accessible to a broader audience and showcases my skills in creating mobile-friendly websites.'
+            }
+        ]
     },
     {
         id: '2',
