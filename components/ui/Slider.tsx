@@ -74,12 +74,12 @@ const Slider = ({ images, description }: SliderProps) => {
                     {'>'}
                 </button>
             </div>
-            <div className="absolute flex justify-center items-center gap-2 bottom-1 bg-black bg-opacity-30 p-1 rounded-md">
+            <div className="md:absolute flex justify-center items-center gap-6 bottom-6  bg-black bg-opacity-30 p-1 rounded-md">
                 {images.map((image, index) => (
                     <button
                         onClick={() => setCurrentIndex(index)}
                         key={index}
-                        className={`bg-clr_1 text-white p-1 max-md:hidden rounded-md ${currentIndex === index ? 'bg-clr_1' : 'bg-clr_3'}`}
+                        className={`bg-clr_1 text-white p-1 rounded-md ${currentIndex === index ? 'bg-clr_1' : 'bg-clr_3'}`}
                         aria-label={`image ${index + 1}`}
                     ></button>
                 ))}
