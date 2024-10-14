@@ -61,19 +61,19 @@ const Hero = () => {
                         className='text-lg max-sm:text-sm md:text-2xl lg:text-3xl text-start ' 
                     />
                 </div>
-                <div className='mt-8 flex justify-center items-center gap-4'>
-                    <a href="#2">
-                        <MagicButton 
-                            content='Show Projects'
-                            icon={<FaArrowDown />}
-                            position='right'
-                        />
-                    </a>
+                <div className='mt-8 flex max-md:flex-col justify-center items-center gap-4'>
                     {/* download cv */}
                     <a href='/files/Ahmed_Eid.pdf' download>
                         <MagicButton 
                             content='Download CV'
                             position='left'
+                        />
+                    </a>
+                    <a href="#2">
+                        <MagicButton 
+                            content='Show Projects'
+                            icon={<FaArrowDown />}
+                            position='right'
                         />
                     </a>
                 </div>
