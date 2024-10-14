@@ -51,7 +51,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                     {project.sections?.map((section, index) => (
                                         <div key={index}>
                                             {index % 2 === 0 ? (
-                                                <div key={index} className='flex flex-wrap basis-2 items-center justify-center gap-4 w-full self-start bg-black bg-opacity-30 rounded-md p-4'>
+                                                <div key={index} className='flex max-md:flex-col flex-wrap basis-2 items-center justify-center gap-4 w-full self-start bg-black bg-opacity-30 rounded-md p-4'>
                                                     <div className='flex-1 self-center'>
                                                         {section.image && 
                                                             <Image
@@ -65,21 +65,21 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                                     </div>
                                                     <div className='flex-1'>
                                                         <h2
-                                                            className='text-2xl text-center bg-clr_1 bg-opacity-20 p-2 rounded-md w-fit'
+                                                            className='text-2xl max-md:text-lg text-center bg-clr_1 bg-opacity-20 p-2 rounded-md w-fit'
                                                         >{section.title}</h2>
                                                         <h3
-                                                            className='text-xl text-white  rounded-md  p-2'
+                                                            className='text-xl max-md:text-sm text-white  rounded-md  p-2'
                                                         >{section.content}</h3>
                                                     </div>
                                                 </div>
                                             ) : (
-                                                <div key={index} className='flex flex-wrap basis-2 items-center justify-center gap-4 w-full self-end bg-black bg-opacity-30 p-2'>
+                                                <div key={index} className='flex max-md:flex-col flex-wrap basis-2 items-center justify-center gap-4 w-full self-end bg-black bg-opacity-30 p-2'>
                                                     <div className='flex-1'>
                                                         <h2
-                                                            className='text-2xl text-center bg-clr_1 bg-opacity-20 p-2 rounded-md w-fit'
+                                                            className='text-2xl max-md:text-lg text-center bg-clr_1 bg-opacity-20 p-2 rounded-md w-fit'
                                                         >{section.title}</h2>
                                                         <h3
-                                                            className='text-xl text-white rounded-md p-2'
+                                                            className='text-xl max-md:text-sm text-white rounded-md p-2'
                                                         >{section.content}</h3>
                                                     </div>
                                                     <div className='flex-1 self-center'>
