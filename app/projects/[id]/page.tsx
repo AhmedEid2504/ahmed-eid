@@ -36,11 +36,11 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                 <div className='flex gap-4'>
                                     <SliderImageBtns images={project.images} />
                                 </div>
-                                <div className='flex sm:flex-wrap max-sm:overflow-auto max-sm:overflow-y-hidden max-sm:w-[70vw] justify-center items-center max-sm:justify-start max-sm:items-start gap-2 bg-black bg-opacity-30 p-1 rounded-md'>
+                                <div className='flex max-sm:flex-wrap max-sm:w-[70vw] justify-center items-center gap-2  p-1 rounded-md'>
                                     {project.tags.map((tag, index) => (
                                         <button
                                             key={index}
-                                            className='text-white p-1 rounded-md'
+                                            className='text-white p-1 rounded-md bg-black bg-opacity-30'
                                         >
                                             {tag}
                                         </button>
