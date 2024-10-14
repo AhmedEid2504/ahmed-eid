@@ -64,7 +64,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
     };
 
     return (
-        <div className="flex flex-col items-center max-md:items-start max-md:px-[8rem] justify-center h-full ">
+        <div className="flex flex-col items-center max-md:items-start max-md:px-[6rem] justify-center h-full ">
             <h1 className="text-2xl text-white font-bold mb-5">{title}</h1>
             {/* Roadmap */}
             <div ref={roadmapRef} className="flex flex-col justify-center items-center relative w-fit max-w-xl">
@@ -81,7 +81,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
                     className={`flex flex-col items-center transition-transform duration-500 ${visibleIndex >= index ? 'scale-100' : 'scale-0'}`}
                     >
                     <div className="h-4 w-4 bg-clr_1 border-2 border-black border-opacity-40 rounded-full" />
-                    <span className="absolute -translate-x-16 text-sm text-white">{milestone.label}</span>
+                    <span className="absolute -translate-x-16 text-sm max-md:text-[10px] max-md:-translate-x-12 text-white">{milestone.label}</span>
                     </div>
                     {/* Branches */}
                     {visibleIndex >= index && milestone.branches.length > 0 && (
@@ -90,7 +90,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
                         <div key={branchIndex} className="flex items-center mb-2">
                             {/* Connecting line for each branch */}
                             <div
-                            className={`w-20 max-md:w-14 h-1 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-500 ease-linear ${
+                            className={`w-20 max-md:w-10 h-1 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-500 ease-linear ${
                                 visibleIndex >= index && branchVisibleIndexes.includes(index * 10 + branchIndex) ? 'opacity-100' : 'opacity-0'
                             }`}
                             />
@@ -100,7 +100,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
                             }`}
                             >
                             <div className="h-4 w-4 bg-clr_1 border-2 border-black border-opacity-40 rounded-full" />
-                            <span className="text-sm max-md:text-xs absolute translate-y-6 text-white">{branch}</span>
+                            <span className="text-sm max-md:text-[10px] absolute translate-y-6 text-white">{branch}</span>
                             </div>
                         </div>
                         ))}
