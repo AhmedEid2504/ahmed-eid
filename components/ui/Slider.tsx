@@ -79,7 +79,8 @@ const Slider = ({ images, description }: SliderProps) => {
                     <button
                         onClick={() => setCurrentIndex(index)}
                         key={index}
-                        className={`bg-clr_1 text-white p-1 rounded-md ${currentIndex === index ? 'bg-clr_1' : 'bg-clr_3'}`}
+                        className={`bg-clr_1 text-white p-1 max-md:hidden rounded-md ${currentIndex === index ? 'bg-clr_1' : 'bg-clr_3'}`}
+                        aria-label={`image ${index + 1}`}
                     ></button>
                 ))}
             </div>

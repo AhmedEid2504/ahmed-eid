@@ -49,16 +49,19 @@ const ElevatorNav = () => {
         <button
           onClick={() => handleScroll('1', 0)}
           className="relative w-3 bg-white rounded-full h-3"
+          aria-label='scroll to section 1'
         >
         </button>
         <button
           onClick={() => handleScroll('2', 1)}
           className="relative w-3 bg-white rounded-full h-3"
+          aria-label='scroll to section 2'
         >
         </button>
         <button
           onClick={() => handleScroll('3', 2)}
           className="relative w-3 bg-white rounded-full h-3"
+          aria-label='scroll to section 3'
         >
         </button>
         <div
