@@ -63,6 +63,79 @@ const projectsdetails: ProjectDetails[] = [
     },
     {
         id: '2',
+        name: 'Insight Learn',
+        title: 'Interactive Learning Platform',
+        images: [
+            { src: '/images/projects/insightlearn/insightlearn-1.png', alt: 'Insight Learn Image 1' },
+            { src: '/images/projects/insightlearn/insightlearn-2.png', alt: 'Insight Learn Image 2' },
+            { src: '/images/projects/insightlearn/insightlearn-3.png', alt: 'Insight Learn Image 3' },
+            { src: '/images/projects/insightlearn/insightlearn-4.png', alt: 'Insight Learn Image 4' },
+            { src: '/images/projects/insightlearn/insightlearn-5.png', alt: 'Insight Learn Image 5' },
+            { src: '/images/projects/insightlearn/insightlearn-6.png', alt: 'Insight Learn Image 6' },
+            { src: '/images/projects/insightlearn/insightlearn-7.png', alt: 'Insight Learn Image 7' },
+            { src: '/images/projects/insightlearn/insightlearn-8.png', alt: 'Insight Learn Image 8' },
+            { src: '/images/projects/insightlearn/insightlearn-9.png', alt: 'Insight Learn Image 9' },
+            { src: '/images/projects/insightlearn/insightlearn-10.png', alt: 'Insight Learn Image 10' },
+            { src: '/images/projects/insightlearn/insightlearn-11.png', alt: 'Insight Learn Image 11' },
+            { src: '/images/projects/insightlearn/insightlearn-12.png', alt: 'Insight Learn Image 12' },
+            { src: '/images/projects/insightlearn/insightlearn-13.png', alt: 'Insight Learn Image 13' },
+        ],
+        tags: ['React', 'Tailwind CSS', 'MorphCast Api', 'Django', 'Python', 'PostgreSql', 'Moodle', 'Azure'],
+        description: 'Insight Learn is an interactive e-learning platform built with React, TypeScript, Firebase, and Tailwind CSS. The platform enables students to access educational materials, track their progress, and engage in quizzes using moodle system while analyzing their facial features to make predictions on their success and help professors understand them.',
+        demoLink: 'https://insightlearn.vercel.app/',
+        codeLink: 'https://github.com/YourUsername/InsightLearn',
+        sections: [
+            {
+                title: 'Certificate by the Computer Scientific Society',
+                content: 'Insight Learn received a certificate of appreciation from the Computer Scientific Society for its outstanding contribution to e-learning and educational technology. The platform\'s innovative approach to personalized learning and data analytics has set a new standard for interactive education.',
+                image: { src: '/images/projects/insightlearn/certificate.jpg', alt: 'Insight Learn Certificate' }
+            },
+            {
+                title: 'Insight Learn Graduation Project - Analytical E-Learning Platform',
+                content: 'Insight Learn is an e-learning platform that provides students with a personalized, interactive learning experience. It tracks progress, engages students, and offers insights for educators. With features like interactive quizzes and real-time data synchronization, it creates a dynamic learning environment.',
+                image: { src: '/images/projects/insightlearn/insightlearn-1.png', alt: 'Insight Learn Image' }
+            },
+            {
+                title: 'MorphCast AI SDK for Facial Analysis',
+                content: 'Insight Learn uses MorphCast AI to analyze students\' facial expressions and predict success based on emotional responses. This helps educators gauge engagement levels and learning preferences, enhancing the learning experience with personalized feedback.',
+                image: { src: '/images/projects/insightlearn/morphcast.png', alt: 'Insight Learn Facial Analysis' }
+            },
+            {
+                title: 'Moodle LMS Integration',
+                content: 'The platform integrates with Moodle LMS to offer course management, assessments, and collaborative tools. This ensures a seamless e-learning experience for students and educators.',
+                image: { src: '/images/projects/insightlearn/moodle.png', alt: 'Insight Learn Moodle Integration' }
+            },
+            {
+                title: 'Personalized Dashboard',
+                content: 'Insight Learn features a personalized dashboard where users can track progress, view analytics, and access resources. Interactive charts and data visualizations help monitor performance and guide informed decisions.',
+                image: { src: '/images/projects/insightlearn/insightlearn-4.png', alt: 'Insight Learn Dashboard' }
+            },
+            {
+                title: 'Machine Learning Predictions',
+                content: 'Machine learning algorithms analyze student data to predict success rates and offer personalized recommendations. This helps educators tailor strategies based on student behavior and engagement.',
+                image: { src: '/images/projects/insightlearn/insightlearn-10.png', alt: 'Insight Learn ML Predictions' }
+            },
+            {
+                title: 'Administration and Reporting Tools',
+                content: 'Insight Learn provides powerful reporting tools for administrators and educators to track student progress and generate insights. Detailed analytics and reports support data-driven decisions to improve teaching and learning.',
+                image: { src: '/images/projects/insightlearn/insightlearn-5.png', alt: 'Insight Learn Reporting Tools' }
+            },
+            {
+                title: 'Dark and Light Mode Support',
+                content: 'The platform offers dark and light mode options to accommodate user preferences and reduce eye strain. Users can switch between modes seamlessly, enhancing accessibility and user experience.',
+                image: { src: '/images/projects/insightlearn/insightlearn-12.png', alt: 'Insight Learn Dark and Light Mode' }
+            },
+            {
+                title: 'Our Team',
+                content: 'Insight Learn was developed by a dedicated team of developers, designers, and educators who collaborated to create an innovative e-learning platform. Their combined expertise and passion for education led to the successful implementation of cutting-edge features and functionalities.',
+                image: { src: '/images/projects/insightlearn/insightlearn-13.png', alt: 'Insight Learn Team' }
+            },
+            
+            
+        ]
+    },    
+    {
+        id: '3',
         name: 'High Five',
         title: 'E-commerce Fashion Store',
         images: [
@@ -101,7 +174,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '3',
+        id: '4',
         name: 'Meme Maker',
         title: 'Application for creating memes',
         images: [
@@ -130,7 +203,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '4',
+        id: '5',
         name: 'UBI Order',
         title: '',
         images: [
@@ -161,7 +234,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '5',
+        id: '6',
         name: 'Tindog',
         title: '',
         images: [
@@ -192,7 +265,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '6',
+        id: '7',
         name: 'Cinema Maze',
         title: '',
         images: [
@@ -216,7 +289,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '7',
+        id: '8',
         name: 'Community Chat',
         title: '',
         images: [
@@ -245,7 +318,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '8',
+        id: '9',
         name: 'TraQuiz',
         title: '',
         images: [

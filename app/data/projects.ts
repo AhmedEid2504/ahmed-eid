@@ -16,6 +16,24 @@ const projects = [
     },
     {
         id: '2',
+        name: 'Insight Learn',
+        title: 'Graduation Project',
+        images: [
+            { src: '/images/projects/insightlearn/insightlearn-1.png', alt: 'Insight Learn Image 1' },
+            { src: '/images/projects/insightlearn/certificate.jpg', alt: 'Insight Learn Image 2' },
+            { src: '/images/projects/insightlearn/insightlearn-2.png', alt: 'Insight Learn Image 2' },
+            { src: '/images/projects/insightlearn/insightlearn-3.png', alt: 'Insight Learn Image 3' },
+            { src: '/images/projects/insightlearn/insightlearn-4.png', alt: 'Insight Learn Image 4' },
+            { src: '/images/projects/insightlearn/insightlearn-5.png', alt: 'Insight Learn Image 5' },
+            { src: '/images/projects/insightlearn/insightlearn-6.png', alt: 'Insight Learn Image 6' },
+        ],
+        tags: ['React', 'Tailwind CSS', 'MorphCast Api', 'Django', 'Python', 'PostgreSql', 'Moodle', 'Azure'],
+        description: 'Insight Learn is an interactive e-learning platform built with React, TypeScript, Firebase, and Tailwind CSS. The platform enables students to access educational materials, track their progress, and engage in quizzes for enhanced learning outcomes.',
+        demoLink: 'https://insightlearn.vercel.app/',
+        codeLink: 'https://github.com/YourUsername/InsightLearn',
+    },
+    {
+        id: '3',
         name: 'High Five',
         title: 'E-commerce Fashion Store',
         images: [
@@ -32,7 +50,7 @@ const projects = [
         codeLink:'https://github.com/AhmedEid2504/High-Five'
     },
     {
-        id: '3',
+        id: '4',
         name: 'Meme Maker',
         title: 'Application for creating memes',
         images: [
@@ -45,7 +63,7 @@ const projects = [
         codeLink:'https://github.com/AhmedEid2504/High-Five'
     },
     {
-        id: '4',
+        id: '5',
         name: 'UBI Order',
         title: '',
         images: [
@@ -59,7 +77,7 @@ const projects = [
         codeLink:'https://github.com/AhmedEid2504/High-Five'
     },
     {
-        id: '5',
+        id: '6',
         name: 'Tindog',
         title: '',
         images: [
@@ -73,7 +91,7 @@ const projects = [
         codeLink:'',
     },
     {
-        id: '6',
+        id: '7',
         name: 'Cinema Maze',
         title: '',
         images: [
@@ -86,7 +104,7 @@ const projects = [
         codeLink:''
     },
     {
-        id: '7',
+        id: '8',
         name: 'Community Chat',
         title: '',
         images: [
@@ -98,7 +116,7 @@ const projects = [
         codeLink:''
     },
     {
-        id: '8',
+        id: '9',
         name: 'TraQuiz',
         title: '',
         images: [
