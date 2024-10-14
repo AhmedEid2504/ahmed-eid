@@ -60,20 +60,6 @@ const projects = [
     },
     {
         id: '5',
-        name: 'Comfy House',
-        title: '',
-        images: [
-        { src: '/images/projects/project-5/project5-1.png', alt: 'Project 5 Image 1' },
-        { src: '/images/projects/project-5/project5-2.png', alt: 'Project 5 Image 2' },
-        { src: '/images/projects/project-5/project5-3.png', alt: 'Project 5 Image 3' },
-        ],
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        description: 'E-commerce Furniture Store built with HTML, CSS and JavaScript showcasing different products and their details, with a cart functionality.',
-        demoLink: 'https://comfy-house-two.vercel.app/',
-        codeLink:'',
-    },
-    {
-        id: '6',
         name: 'Tindog',
         title: '',
         images: [
@@ -87,7 +73,7 @@ const projects = [
         codeLink:'',
     },
     {
-        id: '7',
+        id: '6',
         name: 'Cinema Maze',
         title: '',
         images: [
@@ -99,7 +85,7 @@ const projects = [
         codeLink:''
     },
     {
-        id: '8',
+        id: '7',
         name: 'Community Chat',
         title: '',
         images: [

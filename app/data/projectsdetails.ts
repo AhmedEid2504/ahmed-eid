@@ -163,42 +163,6 @@ const projectsdetails: ProjectDetails[] = [
     },
     {
         id: '5',
-        name: 'Comfy House',
-        title: '',
-        images: [
-        { src: '/images/projects/project-5/project5-1.png', alt: 'Project 5 Image 1' },
-        { src: '/images/projects/project-5/project5-2.png', alt: 'Project 5 Image 2' },
-        { src: '/images/projects/project-5/project5-3.png', alt: 'Project 5 Image 3' },
-        ],
-        tags: ['HTML', 'CSS', 'JavaScript'],
-        description: 'E-commerce Furniture Store built with HTML, CSS and JavaScript showcasing different products and their details, with a cart functionality.',
-        demoLink: 'https://comfy-house-two.vercel.app/',
-        codeLink:'',
-        sections: [
-            {
-                title: 'Comfy House - E-commerce Furniture Store Overview',
-                content: 'Comfy House is an e-commerce website designed for furniture enthusiasts, offering a wide range of products and styles for home decor. Built with HTML, CSS, and JavaScript, this website provides an immersive shopping experience with detailed product listings, interactive features, and a user-friendly interface. The site showcases my ability to create visually appealing and functional e-commerce platforms that cater to diverse customer preferences.',
-                image: { src: '/images/projects/project-5/project5-1.png', alt: 'Project 5 Image 1' }
-            },
-            {
-                title: 'Product Catalog and Detailed Listings',
-                content: 'The website features a comprehensive product catalog with detailed listings for each item, including high-quality images, descriptions, prices, and customer reviews. Users can browse through different categories, filter products based on preferences, and view additional details to make informed purchasing decisions. The interactive design elements and intuitive navigation enhance the user experience, making it easy to explore and discover new products.',
-                image: { src: '/images/projects/project-5/project5-2.png', alt: 'Project 5 Image 2' }
-            },
-            {
-                title: 'Shopping Cart and Checkout Process',
-                content: 'Comfy House includes a functional shopping cart system that allows users to add products, adjust quantities, and proceed to checkout with ease. The cart displays a summary of selected items, total prices, and shipping options, providing a seamless shopping experience. The checkout process is designed to be user-friendly, guiding customers through the necessary steps to complete their purchase securely and efficiently.',
-                image: { src: '/images/projects/project-5/project5-3.png', alt: 'Project 5 Image 3' }
-            },
-            {
-                title: 'Responsive Design and Mobile Compatibility',
-                content: 'The website is built with a responsive design that ensures optimal performance on devices of all sizes, from desktops to smartphones. This mobile compatibility allows users to shop conveniently on their mobile devices, browse products, and make purchases on the go. The responsive layout adapts to different screen resolutions and orientations, providing a consistent and engaging shopping experience for all users.',
-                image: { src: '/images/projects/project-5/project5-3.png', alt: 'Project 5 Image 3' }
-            }
-        ]
-    },
-    {
-        id: '6',
         name: 'Tindog',
         title: '',
         images: [
@@ -229,7 +193,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '7',
+        id: '6',
         name: 'Cinema Maze',
         title: '',
         images: [
@@ -258,7 +222,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '8',
+        id: '7',
         name: 'Community Chat',
         title: '',
         images: [
