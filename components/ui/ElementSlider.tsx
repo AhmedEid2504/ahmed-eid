@@ -63,14 +63,14 @@ const ElementSlider = ({projects}:ElementSliderProps) => {
                     </button>
                 </div>
             </div>
-            <div className=' flex sm:flex-wrap max-sm:overflow-auto max-sm:overflow-y-hidden max-sm:w-[70vw] justify-center items-center max-sm:justify-start max-sm:items-start gap-2 bg-black bg-opacity-30 p-1 rounded-md'>
+            <div className=' flex md:flex-wrap max-md:overflow-auto max-md:overflow-y-hidden max-md:w-[70vw] justify-center items-center max-md:justify-start max-md:items-start gap-2 bg-black bg-opacity-30 p-1 rounded-md'>
                 {projects.map((project, index) => (
                     <button
                         onClick={() => setCurrentElementIndex(index)}
                         key={index}
                         className={` text-white p-1 rounded-md ${currentElementIndex === index ? 'border-2 border-clr_1' : ''}`}
                     >
-                        <div className='relative max-sm:w-[60px] max-sm:max-w-[100px] max-sm:max-h-[50px] max-sm:text-xs flex flex-col justify-center items-center '>
+                        <div className='relative max-md:w-[60px] max-md:max-w-[100px] max-md:max-h-[50px] max-md:text-xs flex flex-col justify-center items-center '>
                             <Image
                                 src={project.images[0].src}
                                 alt={project.images[0].alt}

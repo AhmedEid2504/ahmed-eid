@@ -27,12 +27,12 @@ const ProjectCard = ({
 
         />
         {/* description */}
-        <div className='flex flex-col justify-center items-center gap-4 pt-2'>
+        <div className='flex flex-col justify-center items-center gap-2 max-md:gap-4 pt-2'>
             <h1 className='text-xl max-sm:text-lg'>{name}</h1>
             {/* tags */}
             <div className='flex flex-wrap justify-center items-center gap-2'>
               {tags.map((tag, index) => (
-                <span key={index} className='bg-black bg-opacity-35 text-white p-4 max-sm:text-xs max-sm:pt-0.5 max-sm:py-0 rounded-md'>{tag}</span>
+                <span key={index} className='bg-black bg-opacity-35 text-white p-2 max-sm:text-xs max-sm:pt-0.5 max-sm:py-0 rounded-md'>{tag}</span>
               ))}
             </div>
             <div className='flex justify-center items-center gap-3'>

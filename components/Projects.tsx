@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div className='relative min-h-screen h-full w-screen text-white justify-center items-center'>
         <GridBG />
-        <div className='h-full min-h-screen w-screen text-white  sm:pt-10 p-5  flex flex-col justify-center items-center gap-3'>
+        <div className='h-full min-h-screen w-screen text-white p-5 flex flex-col justify-center items-center gap-2'>
           <h1 className='text-3xl'>My Projects</h1>
             <div className='flex'>
               <div className='h-full flex flex-wrap justify-center items-center gap-5 bg-black bg-opacity-30 p-5 rounded-lg w-fit'>

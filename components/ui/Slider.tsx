@@ -50,7 +50,7 @@ const Slider = ({ images, description }: SliderProps) => {
                     {'<'}
                 </button>
                 <div
-                    className={`relative max-w-[300px] max-h-[200px] sm:max-w-[600px] sm:max-h-[350px] overflow-auto transition-opacity cursor-pointer duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
+                    className={`relative max-w-[300px] sm:max-w-[600px] max-md:h-[150px] md:h-[330px]  overflow-hidden transition-opacity cursor-pointer duration-300 ${fade ? 'opacity-100' : 'opacity-0'}`}
                     onMouseEnter={() => setFade(true)}
                     onMouseLeave={() => setFade(true)}
                 >
