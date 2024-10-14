@@ -6,13 +6,14 @@ const App: React.FC = () => {
     { label: 'HTML', progress: 0, branches: [] },
     { label: 'CSS', progress: 25, branches: ['Bootstrap', 'Tailwind'] },
     { label: 'JavaScript', progress: 50, branches: ['TypeScript'] },
-    { label: 'React', progress: 100, branches: ['Next.js'] },
+    { label: 'React', progress: 100, branches: ['Redux Toolkit',  ] },
+    { label: 'Next.js', progress: 100, branches: [] },
   ];
 
   const backendMilestones = [
     { label: 'Firebase', progress: 0, branches: [] },
     { label: 'Python', progress: 25, branches: [] },
-    { label: 'Django', progress: 50, branches: [] },
+    { label: 'Django', progress: 50, branches: ['Rest Framework'] },
     { label: 'Database', progress: 75, branches: ['MongoDB', 'PostgreSQL'] },
     { label: 'Authentication', progress: 100, branches: ['JWT', 'OAuth'] },
   ];
@@ -29,7 +30,7 @@ const App: React.FC = () => {
 
   return (
     <div className="flex  items-center justify-center max-md:justify-start gap-10 h-screen">
-      <div className='flex max-md:hidden flex-col flex-wrap items-center justify-start w-[90vw] h-full overflow-auto py-5 gap-10'>
+      <div className='flex max-md:hidden flex-col flex-wrap items-center justify-start w-[90vw] h-full overflow-auto py-10 gap-10'>
         <div className='w-[20vw] '>
           <RoadMap title="Frontend" milestones={frontendMilestones} />
         </div>

@@ -73,7 +73,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
                 <div key={index} className="flex flex-col items-center justify-center relative">
                     {index > 0 && (
                     <div
-                        className={`w-1 h-16 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-500 ${visibleIndex >= index ? 'opacity-100' : 'opacity-0'}`}
+                        className={`w-1 h-12 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-500 ${visibleIndex >= index ? 'opacity-100' : 'opacity-0'}`}
                     />
                     )}
                     {/* Milestone Node */}
@@ -85,7 +85,7 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
                     </div>
                     {/* Branches */}
                     {visibleIndex >= index && milestone.branches.length > 0 && (
-                    <div className="absolute left-4 top-16 flex items-center">
+                    <div className="absolute left-4 top-12 flex items-center">
                         {milestone.branches.map((branch, branchIndex) => (
                         <div key={branchIndex} className="flex items-center mb-2">
                             {/* Connecting line for each branch */}
