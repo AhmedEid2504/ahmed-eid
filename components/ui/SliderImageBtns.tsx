@@ -74,11 +74,11 @@ const Slider = ({ images, description }: SliderProps) => {
                     {'>'}
                 </button>
             </div>
-            <div>
+            <div className=''>
                 {images.map((image, index) => (
                     <button
                         key={index}
-                        className=' text-white p-1 rounded-md border-x-2 border-clr_1'
+                        className=' text-white p-1 rounded-md border-x-2 border-clr_1 w-[80px] bg-clr_1 bg-opacity-20 hover:bg-opacity-50'
                         onClick={() => setCurrentIndex(index)}
                     >
                         <Image
