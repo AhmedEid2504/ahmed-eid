@@ -104,8 +104,8 @@ const projects = [
         { src: '/images/projects/traquiz/traquiz-1.png', alt: 'Project 10 Image' },
         { src: '/images/projects/traquiz/traquiz-2.png', alt: 'Project 10 Image' },
         ],
-        tags: ['React', 'TypeScript', 'TailwindCSS', 'Open Trivia API'],
-        description: 'TraQuiz is a quiz application built with React, TypeScript, TailwindCSS, and the Open Trivia API. It features a wide range of quiz categories, difficulty levels, and question types to challenge users and test their knowledge. The app provides a fun and interactive way to learn new facts, compete with friends, and explore different topics through engaging quizzes.',
+        tags: ['Html', 'CSS', 'JavaScript'],
+        description: 'TraQuiz is a quiz application built with html css javascript for helping users choose the right track for them according to their test score.',
         demoLink: 'https://traquiz.vercel.app/',
         codeLink:'',
         sections: [
