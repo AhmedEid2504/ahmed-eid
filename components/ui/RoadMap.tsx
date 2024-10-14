@@ -73,12 +73,12 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
                 <div key={index} className="flex flex-col items-center justify-center relative">
                     {index > 0 && (
                     <div
-                        className={`w-1 h-12 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-500 ${visibleIndex >= index ? 'opacity-100' : 'opacity-0'}`}
+                        className={`w-1 h-12 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-200 ${visibleIndex >= index ? 'opacity-100' : 'opacity-0'}`}
                     />
                     )}
                     {/* Milestone Node */}
                     <div
-                    className={`flex flex-col items-center transition-transform duration-500 ${visibleIndex >= index ? 'scale-100' : 'scale-0'}`}
+                    className={`flex flex-col items-center transition-transform duration-200 ${visibleIndex >= index ? 'scale-100' : 'scale-0'}`}
                     >
                     <div className="h-4 w-4 bg-clr_1 border-2 border-black border-opacity-40 rounded-full" />
                     <span className="absolute -translate-x-16 text-sm max-md:text-[10px] max-md:-translate-x-12 text-white">{milestone.label}</span>
@@ -90,12 +90,12 @@ const Roadmap: React.FC<RoadmapProps> = ({ title, milestones }) => {
                         <div key={branchIndex} className="flex items-center mb-2">
                             {/* Connecting line for each branch */}
                             <div
-                            className={`w-20 max-md:w-10 h-1 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-500 ease-linear ${
+                            className={`w-20 max-md:w-10 h-1 bg-clr_1 border-2 border-black border-opacity-40 transition-opacity duration-200 ease-linear ${
                                 visibleIndex >= index && branchVisibleIndexes.includes(index * 10 + branchIndex) ? 'opacity-100' : 'opacity-0'
                             }`}
                             />
                             <div
-                            className={`flex flex-col items-center transition-transform duration-500 ease-linear ${
+                            className={`flex flex-col items-center transition-transform duration-200 ease-linear ${
                                 visibleIndex >= index && branchVisibleIndexes.includes(index * 10 + branchIndex) ? 'scale-100' : 'scale-0'
                             }`}
                             >

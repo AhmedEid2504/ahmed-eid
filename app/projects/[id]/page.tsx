@@ -47,12 +47,12 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                     ))}
                                 </div>
                                 {/* sections */}
-                                <div className='flex flex-col w-screen p-10 gap-6'>
+                                <div className='flex flex-col items-center justify-center w-screen p-10 gap-6'>
                                     {project.sections?.map((section, index) => (
                                         <div key={index}>
                                             {index % 2 === 0 ? (
-                                                <div key={index} className='flex max-md:flex-col flex-wrap basis-2 items-center justify-center gap-4 w-full self-start bg-black bg-opacity-30 rounded-md p-4'>
-                                                    <div className='flex-1 self-center'>
+                                                <div key={index} className='flex max-md:flex-col flex-wrap basis-2 items-center justify-center gap-4 w-full  bg-black bg-opacity-30 rounded-md p-4'>
+                                                    <div className='flex-1 self-center max-h-screen'>
                                                         {section.image && 
                                                             <Image
                                                                 key={index}
@@ -73,7 +73,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                                     </div>
                                                 </div>
                                             ) : (
-                                                <div key={index} className='flex max-md:flex-col flex-wrap basis-2 items-center justify-center gap-4 w-full self-end bg-black bg-opacity-30 p-2'>
+                                                <div key={index} className='flex max-md:flex-col flex-wrap basis-2 items-center justify-center gap-4 w-full bg-black bg-opacity-30 p-2'>
                                                     <div className='flex-1'>
                                                         <h2
                                                             className='text-2xl max-md:text-lg text-center bg-clr_1 bg-opacity-20 p-2 rounded-md w-fit'
@@ -82,7 +82,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                                             className='text-xl max-md:text-sm text-white rounded-md p-2'
                                                         >{section.content}</h3>
                                                     </div>
-                                                    <div className='flex-1 self-center'>
+                                                    <div className='flex-1 flex justify-center items-center self-center max-h-screen'>
                                                         {section.image && 
                                                             <Image
                                                                 key={index}
@@ -90,7 +90,7 @@ const ProjectDetails = ({ params }: ProjectDetailsProps) => {
                                                                 alt={section.image.alt}
                                                                 width={800}
                                                                 height={400}
-                                                                className='w-full'
+                                                                className='w-fit max-h-[70dvh]'
                                                             />
                                                         } 
                                                     </div>

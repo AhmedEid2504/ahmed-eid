@@ -20,9 +20,10 @@ const projectsdetails: ProjectDetails[] = [
         name: 'Portfolio',
         title: '',
         images: [
-        { src: '/images/projects/project-9/project9-1.png', alt: 'Project 9 Image', description: 'Hero Section' },
+        { src: '/images/projects/project-9/project9-1.gif', alt: 'Project 9 Image', description: 'Hero Section' },
         { src: '/images/projects/project-9/project9-2.png', alt: 'Project 9 Image', description: 'Projects Section' },
         { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image', description: 'Skills Section' },
+        { src: '/images/projects/project-9/chat.png', alt: 'Project 9 Image', description: 'Contact Section' },
         ],
         tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
         description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
@@ -35,19 +36,28 @@ const projectsdetails: ProjectDetails[] = [
                 image: { src: '/images/projects/project-9/project9-1.png', alt: 'Project 9 Image' }
             },
             {
+                title: 'Awesome Animations and Interactive Elements',
+                content: 'The website features engaging animations and interactive elements that enhance the user experience and create a dynamic interface. From scrolling animations to hover effects, each element is designed to capture the user\'s attention and guide them through the content. These animations add a touch of creativity and interactivity to the site, making it more engaging and memorable for visitors.',
+                image: { src: '/images/projects/project-9/animation-1.gif', alt: 'Project 9 Image' }
+            },
+            {
+                title: 'Reusable Components and Modular Design',
+                content: 'The website is built with reusable components and a modular design approach, allowing for easy maintenance and scalability. Each section of the site is designed as a separate component, making it simple to update content, add new projects, or modify existing features. This modular structure ensures consistency in design and functionality across the site, providing a seamless user experience for visitors.',
+            },
+            {
                 title: 'Advanced Tech Stack for Performance and Scalability',
                 content: 'The use of Next.js ensures that the website is highly performant with built-in optimizations like server-side rendering (SSR) and static site generation (SSG). TypeScript provides strong typing, ensuring fewer runtime errors and more robust code. Finally, TailwindCSS helps maintain a clean and organized design, enabling rapid development of responsive and modern user interfaces.',
-                image: { src: '/images/projects/project-9/project9-2.png', alt: 'Project 9 Image' }
+                image: { src: '/images/projects/project-9/tech.jpg', alt: 'Project 9 Image' }
             },
             {
                 title: 'Highlighting My Best Work',
                 content: 'One of the most important sections of this portfolio is the Projects Section, where each project is displayed with attention to detail, including images, descriptions, and live demos. This section emphasizes my diverse experience, showcasing projects built using various technologies and frameworks. Each project card is interactive, providing users with more information and links to code repositories and demos.',
-                image: { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image' }
+                image: { src: '/images/projects/project-9/animation-2.gif', alt: 'Project 9 Image' }
             },
             {
-                title: 'User Experience and Responsiveness',
-                content: 'The website is designed to be fully responsive, ensuring that it looks and works great on devices of all sizes, from desktops to smartphones. This attention to responsiveness makes it accessible to a broader audience and showcases my skills in creating mobile-friendly websites.',
-                image: { src: '/images/projects/project-9/project9-3.png', alt: 'Project 9 Image' }
+                title: 'Real-Time Chat Feature for Instant Communication With Me',
+                content: 'The portfolio website includes a real-time chat feature that allows visitors to communicate with me instantly. This feature enables potential employers, collaborators, or clients to reach out, ask questions, or discuss opportunities directly on the site. The chat interface is user-friendly and responsive, providing a seamless communication channel for engaging with visitors in real time.',
+                image: { src: '/images/projects/project-9/chat.png', alt: 'Project 9 Image' }
             }
         ]
     },
@@ -71,23 +81,23 @@ const projectsdetails: ProjectDetails[] = [
             {
                 title: 'High Five - E-commerce Fashion Store Overview',
                 content: 'High Five is an elegant and functional e-commerce website tailored for fashion enthusiasts. Built using HTML, CSS, and JavaScript, this website offers a seamless shopping experience with a modern and visually appealing interface. It demonstrates my ability to create feature-rich, user-friendly e-commerce platforms with smooth navigation and a clean layout.',
-                image: { src: '/images/projects/project-1/project1-1.png', alt: 'Project 1 Image' }
-            },
-            {
-                title: 'Key Features and Functional Shopping Experience',
-                content: 'The website includes essential e-commerce features such as product listings, detailed product views, and a functional shopping cart system. The cart allows users to easily add and remove items, view their selections, and proceed to checkout. Additionally, intuitive navigation and product categorization enhance the user experience, allowing shoppers to quickly find what they need.',
                 image: { src: '/images/projects/project-1/project1-2.png', alt: 'Project 1 Image' }
-            },
-            {
-                title: 'Interactive Shopping Cart and Checkout Process',
-                content: 'The shopping cart functionality allows users to add products, adjust quantities, and proceed to checkout seamlessly. The checkout process is designed to be intuitive and user-friendly, guiding customers through the necessary steps to complete their purchase. Users can review their order, enter shipping details, and choose payment options, creating a streamlined shopping experience.',
-                image: { src: '/images/projects/project-1/project1-3.png', alt: 'Project 1 Image' }
             },
             {
                 title: 'Responsive Design and Mobile Compatibility',
                 content: 'High Five is built with a responsive design that ensures optimal performance on devices of all sizes. Whether users are browsing on a desktop, tablet, or smartphone, the website adapts to different screen resolutions and orientations, providing a consistent and engaging experience. This mobile compatibility enhances accessibility and usability, catering to a diverse audience of fashion shoppers.',
-                image: { src: '/images/projects/project-1/project1-4.png', alt: 'Project 1 Image' }
-            }
+                image: { src: '/images/projects/project-1/project1-responsive-1.png', alt: 'Project 1 Image' }
+            },
+            {
+                title: 'Key Features and Functional Shopping Experience',
+                content: 'The website includes essential e-commerce features such as product listings, detailed product views, and a functional shopping cart system. The cart allows users to easily add and remove items, view their selections, and proceed to checkout. Additionally, intuitive navigation and product categorization enhance the user experience, allowing shoppers to quickly find what they need.',
+                image: { src: '/images/projects/project-1/project1-5.png', alt: 'Project 1 Image' }
+            },
+            {
+                title: 'Interactive Shopping Cart and Checkout Process',
+                content: 'The shopping cart functionality allows users to add products, adjust quantities, and proceed to checkout seamlessly. The checkout process is designed to be intuitive and user-friendly, guiding customers through the necessary steps to complete their purchase. Users can review their order, enter shipping details, and choose payment options, creating a streamlined shopping experience.',
+                image: { src: '/images/projects/project-1/project1-6.png', alt: 'Project 1 Image' }
+            },
         ]
     },
     {
