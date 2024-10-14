@@ -35,7 +35,6 @@ const ProjectCard = ({
                 <span key={index} className='bg-black bg-opacity-35 text-white p-2 max-sm:text-xs max-sm:pt-0.5 max-sm:py-0 rounded-md'>{tag}</span>
               ))}
             </div>
-            <h1 className='text-sm'>{title || ""}</h1>
             <div className='flex justify-center items-center gap-3'>
                 <a href={demoLink} target='_blank'>
                   <MagicButton
