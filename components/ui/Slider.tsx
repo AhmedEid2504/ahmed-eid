@@ -42,7 +42,7 @@ const Slider = ({ images, description }: SliderProps) => {
 
     return (
         <div className="relative flex flex-wrap justify-center items-center gap-2">
-            <div className="flex ease-in duration-150 gap-2">
+            <div className="flex max-md:flex-col ease-in duration-150 gap-2">
                 <button
                     onClick={prevSlide}
                     className="bg-white text-clr_1 bg-opacity-15 hover:bg-opacity-30 active:opacity-50 p-1 rounded-md"
@@ -69,7 +69,7 @@ const Slider = ({ images, description }: SliderProps) => {
                 </div>
                 <button
                     onClick={nextSlide}
-                    className="bg-white text-clr_1 bg-opacity-15 hover:bg-opacity-30 active:opacity-50 p-1 rounded-md"
+                    className="bg-white  text-clr_1 bg-opacity-15 hover:bg-opacity-30 active:opacity-50 p-1 rounded-md"
                 >
                     {'>'}
                 </button>
