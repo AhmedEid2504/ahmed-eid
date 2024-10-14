@@ -1,7 +1,6 @@
 "use client";
 import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
-import ShowCase from "@/components/ShowCase";
 import TechStack from "@/components/TechStack";
 import Chat from "@/components/ui/Chat";
 import ChatButton from "@/components/ui/ChatButton";
