@@ -1,117 +1,60 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
+import RoadMap from './ui/RoadMap'
 
-// Define the structure for milestones
-interface Milestone {
-  label: string;
-  progress: number;
-  branches: string[];
-}
+const App: React.FC = () => {
+  const frontendMilestones = [
+    { label: 'HTML', progress: 0, branches: [] },
+    { label: 'CSS', progress: 25, branches: ['Bootstrap', 'Tailwind'] },
+    { label: 'JavaScript', progress: 50, branches: ['TypeScript'] },
+    { label: 'React', progress: 100, branches: ['Next.js'] },
+  ];
 
-const milestones: Milestone[] = [
-  { label: 'HTML', progress: 0, branches: [] },
-  { label: 'CSS', progress: 25, branches: ['Bootstrap', 'Tailwind'] },
-  { label: 'JavaScript', progress: 50, branches: ['TypeScript'] },
-  { label: 'React', progress: 100, branches: ['Next.js'] },
-];
+  const backendMilestones = [
+    { label: 'Firebase', progress: 0, branches: [] },
+    { label: 'Python', progress: 25, branches: [] },
+    { label: 'Django', progress: 50, branches: [] },
+    { label: 'Database', progress: 75, branches: ['MongoDB', 'PostgreSQL'] },
+    { label: 'Authentication', progress: 100, branches: ['JWT', 'OAuth'] },
+  ];
 
-const Roadmap: React.FC = () => {
-  const roadmapRef = useRef<HTMLDivElement | null>(null);
-  const [visibleIndex, setVisibleIndex] = useState(-1); // Initially hidden
-  const [branchVisibleIndexes, setBranchVisibleIndexes] = useState<number[]>([]); // Branch visibility
-
-  // Observer to trigger the reveal function when the roadmap is in view
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          revealAllMilestones();
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (roadmapRef.current) {
-      observer.observe(roadmapRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  // Reveal all milestones and branches in sequence 
-  const revealAllMilestones = () => {
-    const revealNextMilestone = (index: number) => {
-      if (index < milestones.length) {
-        setVisibleIndex(index); // Reveal the current milestone
-
-        // Set a timeout to reveal branches after the parent node
-        const branches = milestones[index].branches;
-
-        // Reveal each branch with a delay
-        branches.forEach((_, branchIndex) => {
-          setTimeout(() => {
-            setBranchVisibleIndexes((prev) => [...prev, index * 10 + branchIndex]); // Unique identifier for each branch
-          }, 300 * (branchIndex + 1)); // Delay for each branch (300ms per branch)
-        });
-
-        // Set a timeout to reveal the next milestone
-        setTimeout(() => {
-          revealNextMilestone(index + 1); // Call the next milestone
-        }, 1000 + branches.length * 300); // Adjust delay as needed
-      }
-    };
-
-    revealNextMilestone(0); // Start revealing from the first milestone
-  };
+  const toolsMilestones = [
+    { label: 'VsCode', progress: 0, branches: [] },
+    { label: 'Figma', progress: 25, branches: [] },
+    { label: 'Github', progress: 50, branches: [] },
+    { label: 'Git', progress: 100, branches: [] },
+    { label: 'Anaconada', progress: 100, branches: [] },
+    { label: 'Postman', progress: 100, branches: [] },
+    { label: 'Jira', progress: 100, branches: [] },
+  ];
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <h1 className="text-2xl text-white font-bold mb-5">Front End</h1>
-      {/* Roadmap */}
-      <div ref={roadmapRef} className="flex flex-col justify-center items-center relative w-full max-w-xl">
-        {/* Connecting Lines */}
-        {milestones.map((milestone, index) => (
-          <div key={index} className="flex flex-col items-center justify-center relative">
-            {index > 0 && (
-              <div
-                className={`w-1 h-16 bg-clr_1 transition-opacity duration-500 ${visibleIndex >= index ? 'opacity-100' : 'opacity-0'}`}
-              />
-            )}
-            {/* Milestone Node */}
-            <div
-              className={`flex flex-col items-center transition-transform duration-500 ${visibleIndex >= index ? 'scale-100' : 'scale-0'}`}
-            >
-              <div className="h-4 w-4 bg-clr_1 rounded-full" />
-              <span className="absolute -translate-x-16 text-sm text-white">{milestone.label}</span>
-            </div>
-            {/* Branches */}
-            {visibleIndex >= index && milestone.branches.length > 0 && (
-              <div className="absolute left-4 top-16 flex items-center">
-                {milestone.branches.map((branch, branchIndex) => (
-                  <div key={branchIndex} className="flex items-center mb-2">
-                    {/* Connecting line for each branch */}
-                    <div
-                      className={`w-20 h-1 bg-clr_1 transition-opacity duration-500 ease-linear ${
-                        visibleIndex >= index && branchVisibleIndexes.includes(index * 10 + branchIndex) ? 'opacity-100' : 'opacity-0'
-                      }`}
-                    />
-                    <div
-                      className={`flex flex-col items-center transition-transform duration-500 ease-linear ${
-                        visibleIndex >= index && branchVisibleIndexes.includes(index * 10 + branchIndex) ? 'scale-100' : 'scale-0'
-                      }`}
-                    >
-                      <div className="h-4 w-4 bg-clr_1 rounded-full" />
-                      <span className="text-sm absolute translate-y-6 text-white">{branch}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+    <div className="flex  items-center justify-center max-md:justify-start gap-10 h-screen">
+      <div className='flex max-md:hidden flex-col flex-wrap items-center justify-start w-[90vw] h-full overflow-auto py-5 gap-10'>
+        <div className='w-[20vw] '>
+          <RoadMap title="Frontend" milestones={frontendMilestones} />
+        </div>
+        <div className='w-[20vw] '>
+          <RoadMap title="Backend" milestones={backendMilestones} />
+        </div>
+        <div className='w-[20vw] '>
+          <RoadMap title="Tools" milestones={toolsMilestones} />
+        </div>
+      </div>
+
+      {/* mobile */}
+      <div className='flex md:hidden flex-col items-start justify-start w-[90vw] h-full overflow-y-auto overflow-x-hidden py-10 gap-10'>
+        <div className='w-full '>
+          <RoadMap title="Frontend" milestones={frontendMilestones} />
+        </div>
+        <div className='w-full '>
+          <RoadMap title="Backend" milestones={backendMilestones} />
+        </div>
+        <div className='w-full '>
+          <RoadMap title="Tools" milestones={toolsMilestones} />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Roadmap;
+export default App;
