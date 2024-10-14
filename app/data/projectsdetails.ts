@@ -136,6 +136,35 @@ const projectsdetails: ProjectDetails[] = [
     },    
     {
         id: '3',
+        name: 'Meme Maker',
+        title: 'Application for creating memes',
+        images: [
+        { src: '/images/projects/mememaker/mememaker-1.png', alt: 'mememaker Image 1' },
+        { src: '/images/projects/mememaker/mememaker-2.png', alt: 'mememaker Image 2' },
+        ],
+        tags: ['React', 'JavaScript', 'TailwindCSS', 'Firebase'],
+        description: 'Meme Maker Application built with React, JavaScript, TailwindCSS and Firebase for creating memes with different templates and downloading them, with a login functionality and sharing memes on the wall of memes with other users.',
+        demoLink: 'https://meme-maker-nu.vercel.app/',
+        codeLink:'https://github.com/AhmedEid2504/High-Five',
+        sections: [
+            {
+                title: 'Meme Maker - Application Overview',
+                content: 'Meme Maker is a fun and interactive web application that allows users to create custom memes using a variety of templates and styles. Built with React, JavaScript, TailwindCSS, and Firebase, this application combines a modern tech stack with a user-friendly interface, making meme creation easy and enjoyable. Users can choose from a selection of meme templates, add custom text, and download or share their creations with others.',
+                image: { src: '/images/projects/mememaker/mememaker-1.png', alt: 'mememaker Image' }
+            },
+            {
+                title: 'Customizable Meme Creation and Sharing',
+                content: 'The application offers a range of meme templates and styles to suit different preferences and humor. Users can customize their memes by adding text, changing fonts, and adjusting colors to create unique and personalized creations. Once satisfied with their meme, users can download the image or share it directly to the "Wall of Memes," where other users can view, like, and comment on the shared memes.',
+                image: { src: '/images/projects/mememaker/mememaker-2.png', alt: 'mememaker Image' }
+            },
+            {
+                title: 'User Authentication and Social Interaction',
+                content: 'Meme Maker includes user authentication functionality, allowing users to create accounts, log in, and access personalized features. The "Wall of Memes" serves as a social platform where users can interact with each other by sharing, liking, and commenting on memes. This social aspect adds a community element to the application, encouraging engagement and collaboration among meme creators.',
+            }
+        ]
+    },
+    {
+        id: '4',
         name: 'High Five',
         title: 'E-commerce Fashion Store',
         images: [
@@ -174,35 +203,6 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '4',
-        name: 'Meme Maker',
-        title: 'Application for creating memes',
-        images: [
-        { src: '/images/projects/mememaker/mememaker-1.png', alt: 'mememaker Image 1' },
-        { src: '/images/projects/mememaker/mememaker-2.png', alt: 'mememaker Image 2' },
-        ],
-        tags: ['React', 'JavaScript', 'TailwindCSS', 'Firebase'],
-        description: 'Meme Maker Application built with React, JavaScript, TailwindCSS and Firebase for creating memes with different templates and downloading them, with a login functionality and sharing memes on the wall of memes with other users.',
-        demoLink: 'https://meme-maker-nu.vercel.app/',
-        codeLink:'https://github.com/AhmedEid2504/High-Five',
-        sections: [
-            {
-                title: 'Meme Maker - Application Overview',
-                content: 'Meme Maker is a fun and interactive web application that allows users to create custom memes using a variety of templates and styles. Built with React, JavaScript, TailwindCSS, and Firebase, this application combines a modern tech stack with a user-friendly interface, making meme creation easy and enjoyable. Users can choose from a selection of meme templates, add custom text, and download or share their creations with others.',
-                image: { src: '/images/projects/mememaker/mememaker-1.png', alt: 'mememaker Image' }
-            },
-            {
-                title: 'Customizable Meme Creation and Sharing',
-                content: 'The application offers a range of meme templates and styles to suit different preferences and humor. Users can customize their memes by adding text, changing fonts, and adjusting colors to create unique and personalized creations. Once satisfied with their meme, users can download the image or share it directly to the "Wall of Memes," where other users can view, like, and comment on the shared memes.',
-                image: { src: '/images/projects/mememaker/mememaker-2.png', alt: 'mememaker Image' }
-            },
-            {
-                title: 'User Authentication and Social Interaction',
-                content: 'Meme Maker includes user authentication functionality, allowing users to create accounts, log in, and access personalized features. The "Wall of Memes" serves as a social platform where users can interact with each other by sharing, liking, and commenting on memes. This social aspect adds a community element to the application, encouraging engagement and collaboration among meme creators.',
-            }
-        ]
-    },
-    {
         id: '5',
         name: 'UBI Order',
         title: '',
@@ -235,37 +235,6 @@ const projectsdetails: ProjectDetails[] = [
     },
     {
         id: '6',
-        name: 'Tindog',
-        title: '',
-        images: [
-        { src: '/images/projects/tindog/tindog-1.png', alt: 'tindog Image 1' },
-        { src: '/images/projects/tindog/tindog-2.png', alt: 'tindog Image 2' },
-        { src: '/images/projects/tindog/tindog-3.png', alt: 'tindog Image 3' },
-        ],
-        tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-        description: 'Project 1 Description',
-        demoLink: 'https://tindog-iota-ten.vercel.app/',
-        codeLink:'',
-        sections: [
-            {
-                title: 'Tindog - Landing Page Overview',
-                content: 'Tindog is a landing page designed for a fictional mobile app that connects dog owners and their pets for social interactions and playdates. The page features a modern and engaging design with vibrant colors, playful illustrations, and interactive elements to capture the attention of visitors. Built with HTML, CSS, JavaScript, and Bootstrap, this landing page demonstrates my ability to create visually appealing and responsive web interfaces that cater to specific target audiences.',
-                image: { src: '/images/projects/tindog/tindog-1.png', alt: 'tindog Image 1' }
-            },
-            {
-                title: 'Engaging Design Elements and User Experience',
-                content: 'The landing page includes engaging design elements such as animated sections, hover effects, and interactive buttons to create an immersive user experience. The use of high-quality images, clear typography, and consistent branding enhances the visual appeal and readability of the page, making it easy for visitors to navigate and explore the content. The responsive layout ensures that the page looks great on devices of all sizes, from desktops to mobile phones.',
-                image: { src: '/images/projects/tindog/tindog-2.png', alt: 'tindog Image 2' }
-            },
-            {
-                title: 'Promotions and Call-to-Action',
-                content: 'The landing page features sections dedicated to promoting the app\'s key features, benefits, and subscription plans to attract potential users. Call-to-action buttons and links are strategically placed throughout the page to encourage visitors to sign up, learn more, or download the app. These elements are designed to drive conversions and generate leads for the Tindog app, ultimately increasing user engagement and app downloads.',
-                image: { src: '/images/projects/tindog/tindog-3.png', alt: 'tindog Image 3' }
-            }
-        ]
-    },
-    {
-        id: '7',
         name: 'Cinema Maze',
         title: '',
         images: [
@@ -289,7 +258,7 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '8',
+        id: '7',
         name: 'Community Chat',
         title: '',
         images: [
@@ -318,20 +287,20 @@ const projectsdetails: ProjectDetails[] = [
         ]
     },
     {
-        id: '9',
-        name: 'TraQuiz',
+        id: '8',
+        name: 'CodVanced',
         title: '',
         images: [
         { src: '/images/projects/traquiz/traquiz-1.png', alt: 'traquiz Image 1' },
         { src: '/images/projects/traquiz/traquiz-2.png', alt: 'traquiz Image 2' },
         ],
         tags: ['Html', 'CSS', 'JavaScript'],
-        description: 'TraQuiz is a quiz application built with html css javascript for helping users choose the right track for them according to their test score.',
+        description: 'CodVanced is a quiz application built with html css javascript for helping users choose the right track for them according to their test score.',
         demoLink: 'https://traquiz.vercel.app/',
         codeLink:'',
         sections: [
             {
-                title: 'TraQuiz - Quiz Application',
+                title: 'CodVanced - Quiz Application',
                 content: 'TraQuiz is a quiz application designed to help users choose the right track for them based on their test scores. The app features a series of questions that users can answer to determine their strengths, weaknesses, and preferences. By analyzing the user\'s responses, TraQuiz provides personalized recommendations and suggestions for career paths, educational programs, or skill development opportunities. The app aims to guide users in making informed decisions about their future based on their interests and abilities.',
                 image: { src: '/images/projects/traquiz/traquiz-1.png', alt: 'traquiz Image' }
             },

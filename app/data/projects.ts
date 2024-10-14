@@ -34,6 +34,19 @@ const projects = [
     },
     {
         id: '3',
+        name: 'Meme Maker',
+        title: 'Application for creating memes',
+        images: [
+        { src: '/images/projects/mememaker/mememaker-1.png', alt: 'mememaker Image 1' },
+        { src: '/images/projects/mememaker/mememaker-2.png', alt: 'mememaker Image 2' },
+        ],
+        tags: ['React', 'JavaScript', 'TailwindCSS', 'Firebase'],
+        description: 'Meme Maker Application built with React, JavaScript, TailwindCSS and Firebase for creating memes with different templates and downloading them, with a login functionality and sharing memes on the wall of memes with other users.',
+        demoLink: 'https://meme-maker-nu.vercel.app/',
+        codeLink:'https://github.com/AhmedEid2504/High-Five'
+    },
+    {
+        id: '4',
         name: 'High Five',
         title: 'E-commerce Fashion Store',
         images: [
@@ -47,19 +60,6 @@ const projects = [
         tags: ['HTML', 'CSS', 'JavaScript'],
         description: 'E-commerce Fashion Store built with HTML, CSS and JavaScript showcasing different products and their details, with a cart functionality.',
         demoLink: 'https://high-five-swart.vercel.app/',
-        codeLink:'https://github.com/AhmedEid2504/High-Five'
-    },
-    {
-        id: '4',
-        name: 'Meme Maker',
-        title: 'Application for creating memes',
-        images: [
-        { src: '/images/projects/mememaker/mememaker-1.png', alt: 'mememaker Image 1' },
-        { src: '/images/projects/mememaker/mememaker-2.png', alt: 'mememaker Image 2' },
-        ],
-        tags: ['React', 'JavaScript', 'TailwindCSS', 'Firebase'],
-        description: 'Meme Maker Application built with React, JavaScript, TailwindCSS and Firebase for creating memes with different templates and downloading them, with a login functionality and sharing memes on the wall of memes with other users.',
-        demoLink: 'https://meme-maker-nu.vercel.app/',
         codeLink:'https://github.com/AhmedEid2504/High-Five'
     },
     {
@@ -78,20 +78,6 @@ const projects = [
     },
     {
         id: '6',
-        name: 'Tindog',
-        title: '',
-        images: [
-        { src: '/images/projects/tindog/tindog-1.png', alt: 'tindog Image 1' },
-        { src: '/images/projects/tindog/tindog-2.png', alt: 'tindog Image 2' },
-        { src: '/images/projects/tindog/tindog-3.png', alt: 'tindog Image 3' },
-        ],
-        tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-        description: 'Project 1 Description',
-        demoLink: 'https://tindog-iota-ten.vercel.app/',
-        codeLink:'',
-    },
-    {
-        id: '7',
         name: 'Cinema Maze',
         title: '',
         images: [
@@ -104,7 +90,7 @@ const projects = [
         codeLink:''
     },
     {
-        id: '8',
+        id: '7',
         name: 'Community Chat',
         title: '',
         images: [
@@ -116,8 +102,8 @@ const projects = [
         codeLink:''
     },
     {
-        id: '9',
-        name: 'TraQuiz',
+        id: '8',
+        name: 'CodVanced',
         title: '',
         images: [
         { src: '/images/projects/traquiz/traquiz-1.png', alt: 'traquiz Image 1' },
@@ -129,8 +115,8 @@ const projects = [
         codeLink:'',
         sections: [
             {
-                title: 'TraQuiz - Quiz Application Overview',
-                content: 'TraQuiz is a quiz application designed to entertain and educate users with a variety of trivia questions and topics. Built with React, TypeScript, TailwindCSS, and the Open Trivia API, this app offers a fun and interactive way to test knowledge, learn new facts, and challenge friends. Users can select quiz categories, difficulty levels, and question types to customize their quiz experience and explore different subjects.',
+                title: 'CodVanced - Quiz Application Overview',
+                content: 'CodVanced is a quiz application designed to entertain and educate users with a variety of trivia questions and topics. Built with React, TypeScript, TailwindCSS, and the Open Trivia API, this app offers a fun and interactive way to test knowledge, learn new facts, and challenge friends. Users can select quiz categories, difficulty levels, and question types to customize their quiz experience and explore different subjects.',
                 image: { src: '/images/projects/traquiz/traquiz-1.png', alt: 'Project 10 Image' }
             },
             {
