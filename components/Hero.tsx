@@ -11,9 +11,9 @@ const Hero = () => {
     return (
         <div className='relative h-full min-h-[100dvh] w-screen'>
             <GridBG />
-            <div className='-z-10'>
+            <div className='-z-10 max-md:hidden'>
                 <Spotlight 
-                    className='max-sm:top-[21dvh] sm:top-[12dvh] md:top-[5dvh] -right-10 h-screen w-[100vw]'
+                    className=' sm:top-[12dvh] md:top-[5dvh] -right-10 h-screen w-[100vw]'
                     fill='#00fff9'
                 />
 
@@ -23,6 +23,24 @@ const Hero = () => {
                 />
                 <Spotlight 
                     className='max-sm:top-[17dvh] sm:top-[8dvh] md:top-[1dvh] -right-10 h-screen w-[100vw]'
+                    fill='purple'
+                />
+            </div>
+
+            {/* Mobile spotlight */}
+
+            <div className='-z-10 md:hidden'>
+                <Spotlight 
+                    className='max-sm:top-[14dvh] sm:top-[12dvh] md:top-[5dvh] -right-24 h-screen w-[100vw]'
+                    fill='#00fff9'
+                />
+
+                <Spotlight 
+                    className='max-sm:top-[14dvh] sm:top-[10dvh] md:top-[3dvh] -right-16 h-screen w-[100vw]'
+                    fill='#00a2c5'
+                />
+                <Spotlight 
+                    className='max-sm:top-[14dvh] sm:top-[8dvh] md:top-[1dvh] -right-10 h-screen w-[100vw]'
                     fill='purple'
                 />
             </div>
