@@ -96,6 +96,35 @@ const projects = [
         demoLink: 'https://community-chat-sand.vercel.app/',
         codeLink:''
     },
+    {
+        id: '8',
+        name: 'TraQuiz',
+        title: '',
+        images: [
+        { src: '/images/projects/traquiz/traquiz-1.png', alt: 'Project 10 Image' },
+        { src: '/images/projects/traquiz/traquiz-2.png', alt: 'Project 10 Image' },
+        ],
+        tags: ['React', 'TypeScript', 'TailwindCSS', 'Open Trivia API'],
+        description: 'TraQuiz is a quiz application built with React, TypeScript, TailwindCSS, and the Open Trivia API. It features a wide range of quiz categories, difficulty levels, and question types to challenge users and test their knowledge. The app provides a fun and interactive way to learn new facts, compete with friends, and explore different topics through engaging quizzes.',
+        demoLink: 'https://traquiz.vercel.app/',
+        codeLink:'',
+        sections: [
+            {
+                title: 'TraQuiz - Quiz Application Overview',
+                content: 'TraQuiz is a quiz application designed to entertain and educate users with a variety of trivia questions and topics. Built with React, TypeScript, TailwindCSS, and the Open Trivia API, this app offers a fun and interactive way to test knowledge, learn new facts, and challenge friends. Users can select quiz categories, difficulty levels, and question types to customize their quiz experience and explore different subjects.',
+                image: { src: '/images/projects/traquiz/traquiz-1.png', alt: 'Project 10 Image' }
+            },
+            {
+                title: 'Diverse Quiz Categories and Question Types',
+                content: 'The application features a wide range of quiz categories, including general knowledge, science, history, entertainment, and more, to cater to different interests and preferences. Users can choose specific categories or opt for random quizzes to test their knowledge across various subjects. The app also offers different question types, such as multiple choice, true/false, and open-ended questions, to provide a diverse and engaging quiz experience.',
+                image: { src: '/images/projects/traquiz/traquiz-2.png', alt: 'Project 10 Image' }
+            },
+            {
+                title: 'Interactive Quiz Interface and User Experience',
+                content: 'The quiz interface is designed to be interactive and user-friendly, with intuitive controls, clear instructions, and engaging visuals to enhance the user experience. Users can navigate through questions, select answers, and track their progress in real time, creating an immersive and dynamic quiz environment. The app also includes features like score tracking, time limits, and hints to challenge users and keep them engaged throughout the quiz.',
+            }
+        ]
+    }
 ]
 
 export { projects }

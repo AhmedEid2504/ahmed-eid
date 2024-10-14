@@ -200,25 +200,20 @@ const projectsdetails: ProjectDetails[] = [
         { src: '/images/projects/project-7/project7-1.png', alt: 'Project 7 Image' },
         ],
         tags: ['React', 'JavaScript', 'Movies Search API'],
-        description: 'Cinema Maze Application built with React and JavaScript for searching movies.',
+        description: 'Cinema Maze Application built with React and a movie search api the user gets results based on the search term.',
         demoLink: 'https://cinema-maze.vercel.app/',
         codeLink:'',
         sections: [
             {
                 title: 'Cinema Maze - Movie Search Application Overview',
-                content: 'Cinema Maze is a movie search application that allows users to explore a vast collection of movies, view details, and search for specific titles. Built with React, JavaScript, and the Movies Search API, this application provides a user-friendly interface for discovering new films, reading synopses, and accessing relevant information. The app showcases my ability to create interactive and dynamic web applications that leverage external APIs to deliver engaging content to users.',
+                content: 'Cinema Maze is a movie search application that allows users to discover and explore a wide range of movies based on their search queries. Built with React and JavaScript, this application leverages a movie search API to fetch and display movie data in a user-friendly interface. Users can search for movies by title, genre, or actor, view detailed information about each movie, and save their favorite films for future reference.',
                 image: { src: '/images/projects/project-7/project7-1.png', alt: 'Project 7 Image' }
             },
             {
-                title: 'Comprehensive Movie Database and Search Functionality',
-                content: 'The application features a comprehensive movie database with a wide range of genres, release years, and ratings to suit different preferences. Users can search for movies by title, genre, or keyword, making it easy to find specific films or explore new releases. The search functionality is designed to be intuitive and efficient, providing instant results and detailed information on each movie, including trailers, cast, and reviews.',
-                image: { src: '/images/projects/project-7/project7-1.png', alt: 'Project 7 Image' }
+                title: 'Dynamic Search Functionality',
+                content: 'The application features dynamic search functionality that enables users to find movies quickly and easily by entering keywords or phrases. The search results are displayed in a visually appealing format, with movie posters, titles, and descriptions to help users make informed decisions.',
+                image: { src: '/images/projects/project-7/animation-1.gif', alt: 'Project 7 Image' }
             },
-            {
-                title: 'Interactive Movie Details and User Engagement',
-                content: 'Each movie listing includes interactive elements such as trailers, images, and reviews to engage users and enhance their browsing experience. Users can click on movie posters to view detailed information, watch trailers, and read synopses to learn more about the films. The app also allows users to save favorite movies, create watchlists, and share recommendations with friends, fostering a sense of community and interaction among movie enthusiasts.',
-                image: { src: '/images/projects/project-7/project7-1.png', alt: 'Project 7 Image' }
-            }
         ]
     },
     {
@@ -250,6 +245,37 @@ const projectsdetails: ProjectDetails[] = [
             }
         ]
     },
+    {
+        id: '8',
+        name: 'TraQuiz',
+        title: '',
+        images: [
+        { src: '/images/projects/traquiz/traquiz-1.png', alt: 'Project 10 Image' },
+        { src: '/images/projects/traquiz/traquiz-2.png', alt: 'Project 10 Image' },
+        ],
+        tags: ['Html', 'CSS', 'JavaScript'],
+        description: 'TraQuiz is a quiz application built with html css javascript for helping users choose the right track for them according to their test score.',
+        demoLink: 'https://traquiz.vercel.app/',
+        codeLink:'',
+        sections: [
+            {
+                title: 'TraQuiz - Quiz Application',
+                content: 'TraQuiz is a quiz application designed to help users choose the right track for them based on their test scores. The app features a series of questions that users can answer to determine their strengths, weaknesses, and preferences. By analyzing the user\'s responses, TraQuiz provides personalized recommendations and suggestions for career paths, educational programs, or skill development opportunities. The app aims to guide users in making informed decisions about their future based on their interests and abilities.',
+                image: { src: '/images/projects/traquiz/traquiz-1.png', alt: 'Project 10 Image' }
+            },
+            {
+                title: 'Track Selection and Recommendation System',
+                content: 'The quiz application offers a variety of questions covering different topics, skills, and interests to assess the user\'s knowledge and preferences. Based on the user\'s responses, TraQuiz generates a personalized track recommendation that aligns with the user\'s strengths and interests. The app provides detailed information about each track, including required skills, job opportunities, and educational resources, to help users make informed decisions about their future.',
+                image: { src: '/images/projects/traquiz/traquiz-2.png', alt: 'Project 10 Image' }
+            },
+            {
+                title: 'Interactive Quiz Interface and User Experience',
+                content: 'The application is built with a responsive layout, ensuring a seamless experience on both mobile and desktop devices, Users are presented with immediate feedback based on their answers, helping them make informed decisions.',
+                image: { src: '/images/projects/traquiz/animation-1.gif', alt: 'Project 10 Image' }
+            }
+        ]
+
+    }
 ]
 
 export { projectsdetails }
