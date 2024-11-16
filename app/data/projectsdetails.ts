@@ -20,8 +20,8 @@ const projectsdetails: ProjectDetails[] = [
         name: 'Portfolio',
         title: '',
         images: [
-        { src: '/images/projects/Portfolio/Portfolio-1.gif', alt: 'Portfolio Image 1', description: 'Hero Section' },
-        { src: '/images/projects/Portfolio/Portfolio-2.png', alt: 'Portfolio Image 2', description: 'Projects Section' },
+        { src: '/images/projects/Portfolio/Portfolio-1.png', alt: 'Portfolio Image 1', description: 'Hero Section' },
+        { src: '/images/projects/Portfolio/animation-1.gif', alt: 'Portfolio Image 2', description: 'Projects Section' },
         { src: '/images/projects/Portfolio/Portfolio-3.png', alt: 'Portfolio Image 3', description: 'Skills Section' },
         { src: '/images/projects/Portfolio/chat.png', alt: 'Portfolio Image 4', description: 'Contact Section' },
         ],
@@ -47,7 +47,7 @@ const projectsdetails: ProjectDetails[] = [
             {
                 title: 'Advanced Tech Stack for Performance and Scalability',
                 content: 'The use of Next.js ensures that the website is highly performant with built-in optimizations like server-side rendering (SSR) and static site generation (SSG). TypeScript provides strong typing, ensuring fewer runtime errors and more robust code. Finally, TailwindCSS helps maintain a clean and organized design, enabling rapid development of responsive and modern user interfaces.',
-                image: { src: '/images/projects/Portfolio/tech.jpg', alt: 'Portfolio Image' }
+                image: { src: '/images/projects/Portfolio/stack.jpg', alt: 'Portfolio Image' }
             },
             {
                 title: 'Highlighting My Best Work',

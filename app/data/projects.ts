@@ -4,9 +4,9 @@ const projects = [
         name: 'Portfolio',
         title: '',
         images: [
-            { src: '/images/projects/portfolio/animation-1.gif', alt: 'portfolio Image', description: 'Hero Section' },
-            { src: '/images/projects/portfolio/animation-2.png', alt: 'portfolio Image 2', description: 'Projects Section' },
-            { src: '/images/projects/portfolio/animation-3.png', alt: 'portfolio Image 3', description: 'Skills Section' },
+            { src: '/images/projects/portfolio/portfolio-1.gif', alt: 'portfolio Image 1', description: 'Hero Section' },
+            { src: '/images/projects/portfolio/portfolio-2.png', alt: 'portfolio Image 2', description: 'Projects Section' },
+            { src: '/images/projects/portfolio/portfolio-3.png', alt: 'portfolio Image 3', description: 'Skills Section' },
             { src: '/images/projects/portfolio/chat.png', alt: 'portfolio Image 4', description: 'Contact Section' },
         ],
         tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
