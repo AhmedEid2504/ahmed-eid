@@ -21,8 +21,8 @@ const projectsdetails: ProjectDetails[] = [
         title: '',
         images: [
         { src: '/images/projects/Portfolio/Portfolio-1.png', alt: 'Portfolio Image 1', description: 'Hero Section' },
-        { src: '/images/projects/Portfolio/animation-1.gif', alt: 'Portfolio Image 2', description: 'Projects Section' },
-        { src: '/images/projects/Portfolio/Portfolio-3.png', alt: 'Portfolio Image 3', description: 'Skills Section' },
+        { src: '/images/projects/Portfolio/Portfolio-3.png', alt: 'Portfolio Image 2', description: 'Projects Section' },
+        { src: '/images/projects/Portfolio/animation-1.gif', alt: 'Portfolio Image 3', description: 'Skills Section' },
         { src: '/images/projects/Portfolio/chat.png', alt: 'Portfolio Image 4', description: 'Contact Section' },
         ],
         tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
