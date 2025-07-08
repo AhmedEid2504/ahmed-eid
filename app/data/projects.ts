@@ -1,19 +1,19 @@
 const projects = [
-    {
-        id: '1',
-        name: 'Portfolio',
-        title: '',
-        images: [
-            { src: '/images/projects/portfolio/portfolio-1.gif', alt: 'portfolio Image 1', description: 'Hero Section' },
-            { src: '/images/projects/portfolio/portfolio-2.png', alt: 'portfolio Image 2', description: 'Projects Section' },
-            { src: '/images/projects/portfolio/portfolio-3.png', alt: 'portfolio Image 3', description: 'Skills Section' },
-            { src: '/images/projects/portfolio/chat.png', alt: 'portfolio Image 4', description: 'Contact Section' },
-        ],
-        tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
-        description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
-        demoLink: 'https://ahmed-eid-ashen.vercel.app/',
-        codeLink:''
-    },
+    // {
+    //     id: '1',
+    //     name: 'Portfolio',
+    //     title: '',
+    //     images: [
+    //         { src: '/images/projects/portfolio/portfolio-1.gif', alt: 'portfolio Image 1', description: 'Hero Section' },
+    //         { src: '/images/projects/portfolio/portfolio-2.png', alt: 'portfolio Image 2', description: 'Projects Section' },
+    //         { src: '/images/projects/portfolio/portfolio-3.png', alt: 'portfolio Image 3', description: 'Skills Section' },
+    //         { src: '/images/projects/portfolio/chat.png', alt: 'portfolio Image 4', description: 'Contact Section' },
+    //     ],
+    //     tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
+    //     description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
+    //     demoLink: 'https://ahmed-eid-ashen.vercel.app/',
+    //     codeLink:''
+    // },
     {
         id: '2',
         name: 'Insight Learn',

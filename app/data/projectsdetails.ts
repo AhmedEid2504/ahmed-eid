@@ -15,52 +15,52 @@ type ProjectDetails = {
 }
 
 const projectsdetails: ProjectDetails[] = [
-    {
-        id: '1',
-        name: 'Portfolio',
-        title: '',
-        images: [
-        { src: '/images/projects/Portfolio/Portfolio-1.png', alt: 'Portfolio Image 1', description: 'Hero Section' },
-        { src: '/images/projects/Portfolio/Portfolio-3.png', alt: 'Portfolio Image 2', description: 'Projects Section' },
-        { src: '/images/projects/Portfolio/animation-1.gif', alt: 'Portfolio Image 3', description: 'Skills Section' },
-        { src: '/images/projects/Portfolio/chat.png', alt: 'Portfolio Image 4', description: 'Contact Section' },
-        ],
-        tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
-        description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
-        demoLink: 'https://ahmed-eid-ashen.vercel.app/',
-        codeLink:'',
-        sections: [
-            {
-                title: 'Overview of the Portfolio Website',
-                content: 'This portfolio website serves as a comprehensive representation of my work, skills, and professional journey. It provides potential employers and collaborators with easy access to my most notable projects and achievements. Built using Next.js, TypeScript, and TailwindCSS, this site combines a modern tech stack with an intuitive and visually appealing interface, making it an ideal platform for showcasing my development capabilities.',
-                image: { src: '/images/projects/Portfolio/Portfolio-1.png', alt: 'Portfolio Image' }
-            },
-            {
-                title: 'Awesome Animations and Interactive Elements',
-                content: 'The website features engaging animations and interactive elements that enhance the user experience and create a dynamic interface. From scrolling animations to hover effects, each element is designed to capture the user\'s attention and guide them through the content. These animations add a touch of creativity and interactivity to the site, making it more engaging and memorable for visitors.',
-                image: { src: '/images/projects/Portfolio/animation-1.gif', alt: 'Portfolio Image' }
-            },
-            {
-                title: 'Reusable Components and Modular Design',
-                content: 'The website is built with reusable components and a modular design approach, allowing for easy maintenance and scalability. Each section of the site is designed as a separate component, making it simple to update content, add new projects, or modify existing features. This modular structure ensures consistency in design and functionality across the site, providing a seamless user experience for visitors.',
-            },
-            {
-                title: 'Advanced Tech Stack for Performance and Scalability',
-                content: 'The use of Next.js ensures that the website is highly performant with built-in optimizations like server-side rendering (SSR) and static site generation (SSG). TypeScript provides strong typing, ensuring fewer runtime errors and more robust code. Finally, TailwindCSS helps maintain a clean and organized design, enabling rapid development of responsive and modern user interfaces.',
-                image: { src: '/images/projects/Portfolio/stack.jpg', alt: 'Portfolio Image' }
-            },
-            {
-                title: 'Highlighting My Best Work',
-                content: 'One of the most important sections of this portfolio is the Projects Section, where each project is displayed with attention to detail, including images, descriptions, and live demos. This section emphasizes my diverse experience, showcasing projects built using various technologies and frameworks. Each project card is interactive, providing users with more information and links to code repositories and demos.',
-                image: { src: '/images/projects/Portfolio/animation-2.gif', alt: 'Portfolio Image' }
-            },
-            {
-                title: 'Real-Time Chat Feature for Instant Communication With Me',
-                content: 'The portfolio website includes a real-time chat feature that allows visitors to communicate with me instantly. This feature enables potential employers, collaborators, or clients to reach out, ask questions, or discuss opportunities directly on the site. The chat interface is user-friendly and responsive, providing a seamless communication channel for engaging with visitors in real time.',
-                image: { src: '/images/projects/Portfolio/chat.png', alt: 'Portfolio Image' }
-            }
-        ]
-    },
+    // {
+    //     id: '1',
+    //     name: 'Portfolio',
+    //     title: '',
+    //     images: [
+    //     { src: '/images/projects/Portfolio/Portfolio-1.png', alt: 'Portfolio Image 1', description: 'Hero Section' },
+    //     { src: '/images/projects/Portfolio/Portfolio-3.png', alt: 'Portfolio Image 2', description: 'Projects Section' },
+    //     { src: '/images/projects/Portfolio/animation-1.gif', alt: 'Portfolio Image 3', description: 'Skills Section' },
+    //     { src: '/images/projects/Portfolio/chat.png', alt: 'Portfolio Image 4', description: 'Contact Section' },
+    //     ],
+    //     tags: ['NextJs', 'TypeScript', 'TailwindCSS'],
+    //     description: 'My Portfolio Website built with NextJs, TypeScript and TailwindCSS showcasing my projects and skills.',
+    //     demoLink: 'https://ahmed-eid-ashen.vercel.app/',
+    //     codeLink:'',
+    //     sections: [
+    //         {
+    //             title: 'Overview of the Portfolio Website',
+    //             content: 'This portfolio website serves as a comprehensive representation of my work, skills, and professional journey. It provides potential employers and collaborators with easy access to my most notable projects and achievements. Built using Next.js, TypeScript, and TailwindCSS, this site combines a modern tech stack with an intuitive and visually appealing interface, making it an ideal platform for showcasing my development capabilities.',
+    //             image: { src: '/images/projects/Portfolio/Portfolio-1.png', alt: 'Portfolio Image' }
+    //         },
+    //         {
+    //             title: 'Awesome Animations and Interactive Elements',
+    //             content: 'The website features engaging animations and interactive elements that enhance the user experience and create a dynamic interface. From scrolling animations to hover effects, each element is designed to capture the user\'s attention and guide them through the content. These animations add a touch of creativity and interactivity to the site, making it more engaging and memorable for visitors.',
+    //             image: { src: '/images/projects/Portfolio/animation-1.gif', alt: 'Portfolio Image' }
+    //         },
+    //         {
+    //             title: 'Reusable Components and Modular Design',
+    //             content: 'The website is built with reusable components and a modular design approach, allowing for easy maintenance and scalability. Each section of the site is designed as a separate component, making it simple to update content, add new projects, or modify existing features. This modular structure ensures consistency in design and functionality across the site, providing a seamless user experience for visitors.',
+    //         },
+    //         {
+    //             title: 'Advanced Tech Stack for Performance and Scalability',
+    //             content: 'The use of Next.js ensures that the website is highly performant with built-in optimizations like server-side rendering (SSR) and static site generation (SSG). TypeScript provides strong typing, ensuring fewer runtime errors and more robust code. Finally, TailwindCSS helps maintain a clean and organized design, enabling rapid development of responsive and modern user interfaces.',
+    //             image: { src: '/images/projects/Portfolio/stack.jpg', alt: 'Portfolio Image' }
+    //         },
+    //         {
+    //             title: 'Highlighting My Best Work',
+    //             content: 'One of the most important sections of this portfolio is the Projects Section, where each project is displayed with attention to detail, including images, descriptions, and live demos. This section emphasizes my diverse experience, showcasing projects built using various technologies and frameworks. Each project card is interactive, providing users with more information and links to code repositories and demos.',
+    //             image: { src: '/images/projects/Portfolio/animation-2.gif', alt: 'Portfolio Image' }
+    //         },
+    //         {
+    //             title: 'Real-Time Chat Feature for Instant Communication With Me',
+    //             content: 'The portfolio website includes a real-time chat feature that allows visitors to communicate with me instantly. This feature enables potential employers, collaborators, or clients to reach out, ask questions, or discuss opportunities directly on the site. The chat interface is user-friendly and responsive, providing a seamless communication channel for engaging with visitors in real time.',
+    //             image: { src: '/images/projects/Portfolio/chat.png', alt: 'Portfolio Image' }
+    //         }
+    //     ]
+    // },
     {
         id: '2',
         name: 'Insight Learn',
