@@ -6,8 +6,9 @@ const App: React.FC = () => {
     { label: 'HTML', progress: 0, branches: [] },
     { label: 'CSS', progress: 25, branches: ['Bootstrap', 'Tailwind'] },
     { label: 'JavaScript', progress: 50, branches: ['TypeScript'] },
-    { label: 'React', progress: 100, branches: ['Redux Toolkit',  ] },
-    { label: 'Next.js', progress: 100, branches: [] },
+    { label: 'React', progress: 100, branches: ['Redux Toolkit'] },
+    { label: 'React Native', progress: 100, branches: [] },
+    { label: 'Next.js', progress: 100, branches: ['Zustand'] },
   ];
 
   const backendMilestones = [
@@ -23,9 +24,10 @@ const App: React.FC = () => {
     { label: 'Figma', progress: 25, branches: [] },
     { label: 'Github', progress: 50, branches: [] },
     { label: 'Git', progress: 100, branches: [] },
-    { label: 'Anaconada', progress: 100, branches: [] },
+    { label: 'Anaconda', progress: 100, branches: [] },
     { label: 'Postman', progress: 100, branches: [] },
     { label: 'Jira', progress: 100, branches: [] },
+    { label: 'Lark', progress: 100, branches: [] },
   ];
 
   return (
